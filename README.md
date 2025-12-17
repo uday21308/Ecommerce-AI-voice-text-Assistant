@@ -59,11 +59,12 @@ Text-to-Speech (Browser TTS)
 User hears response
 ```
 
-###RAG Flow:
+### RAG Flow:
+```markdown
 User Query → Embed → Vector DB (Chroma)
            → Retrieve relevant products / FAQs
            → Inject into LLM prompt
-
+```
 ---
 
 ## 🧩 Features Implemented
@@ -108,7 +109,7 @@ User Query → Embed → Vector DB (Chroma)
 
 ## 🗂️ Project Structure
 
-
+```markdown
 Demo_Voicebot/
 │
 ├── app/
@@ -141,7 +142,7 @@ Demo_Voicebot/
 │
 └── README.md
 
-
+```
 
 ---
 
@@ -175,7 +176,7 @@ cd Demo_Voicebot
 python -m venv myenv
 myenv\Scripts\activate   # Windows
 pip install -r requirements.txt
-
+```
 
 Create .env file:
 GROQ_API_KEY=your_groq_key
@@ -184,21 +185,23 @@ LANGCHAIN_API_KEY=your_langsmith_key
 LANGCHAIN_PROJECT=ecommerce-voicebot
 
 Run backend:
+```bash
 uvicorn app.main:app --reload
+```
 
 Backend runs at:
 http://127.0.0.1:8000
 
-2️⃣ Frontend Setup
-
+### 2️⃣ Frontend Setup
+```bash
 cd ecommerce-voice-ui
 npm install
 npm run dev
-
+```
 Frontend runs at:
 http://localhost:5173
 
 
-🙌 Conclusion
+## 🙌 Conclusion
 
 This project demonstrates a practical, modular, and extensible ecommerce voice assistant, showcasing real-world Generative AI concepts including LLMs, RAG, voice interaction, and observability — suitable for academic evaluation and further enhancement.
