@@ -58,55 +58,57 @@ Text-to-Speech (Browser TTS)
       ↓
 User hears response
 
-RAG Flow:
+
+###RAG Flow:
 User Query → Embed → Vector DB (Chroma)
            → Retrieve relevant products / FAQs
            → Inject into LLM prompt
 
+---
+
+## 🧩 Features Implemented
+
+### ✅ Voice Interaction
+- Browser-based Speech-to-Text  
+- Browser-based Text-to-Speech  
+- One-click microphone interaction  
+- Automatic stop-speaking before listening  
+
+### ✅ Conversational Intelligence
+- LLM-powered reasoning (Groq – LLaMA 3.1)  
+- System prompt enforcing ecommerce role  
+- Small-talk handling  
+- Graceful fallback for unsupported queries  
+
+### ✅ Retrieval-Augmented Generation (RAG)
+- Product catalog embeddings  
+- FAQ & policy embeddings  
+- Chroma vector database  
+- Context grounding to reduce hallucinations  
+
+### ✅ Backend Actions (Tools)
+- Order tracking using mock `orders.csv`  
+- Product search using structured data  
+- Intent-based tool routing  
+
+### ✅ Observability
+- LangSmith tracing enabled  
+- Tracks:
+  - LLM calls  
+  - Retrieval steps  
+  - Tool invocations  
+
+### ✅ UI / UX
+- Chat and voice in a single interface  
+- Card-based professional UI (React + Tailwind)  
+- Speaking avatar with waveform animation  
+- Tool transparency panel  
+
+---
+
+## 🗂️ Project Structure
 
 
-🧩 Features Implemented
-
-✅ Voice Interaction
--Browser-based Speech-to-Text
--Browser-based Text-to-Speech
--One-click mic interaction
--Automatic stop-speaking before listening
-
-✅ Conversational Intelligence
--LLM-powered reasoning (Groq – LLaMA 3.1)
--System prompt to enforce ecommerce role
--Small-talk handling
--Graceful fallback for unsupported queries
-
-✅ Retrieval-Augmented Generation (RAG)
--Product catalog embeddings
--FAQ & policy embeddings
--Chroma vector database
--Context grounding (no hallucinations)
-
-✅ Backend Actions (Tools)
--Order tracking using mock orders.csv
--Product search using structured data
--Tool routing logic based on intent
-
-✅ Observability
--LangSmith tracing enabled
--Tracks:
--LLM calls
--Retrieval steps
--Tool invocations
-
-✅ UI / UX
--Chat + voice in a single interface
--Card-based professional UI (React + Tailwind)
--Speaking avatar with waveform animation
--Tool transparency panel
-
-
-
-
-🗂️ Project Structure
 Demo_Voicebot/
 │
 ├── app/
@@ -141,33 +143,39 @@ Demo_Voicebot/
 
 
 
+---
 
+## 🔊 Supported User Scenarios
 
-🔊 Supported User Scenarios
+### Informational Queries
 
-✅ Informational Queries
 “What is your return policy?”
 
-✅ Product Queries
+### Product Queries
 “Suggest watches under 5000”
 
-✅ Order Tracking
+### Order Tracking
 “Track order ORD10008”
 
-✅ Small Talk / Assistance
+### Small Talk / Assistance
 “Hi, can you help me?”
 
 
 
 
-⚙️ Setup Instructions
 
-1️⃣ Backend Setup
+---
 
+## ⚙️ Setup Instructions
+
+### 1️⃣ Backend Setup
+
+```bash
 cd Demo_Voicebot
 python -m venv myenv
 myenv\Scripts\activate   # Windows
 pip install -r requirements.txt
+
 
 Create .env file:
 GROQ_API_KEY=your_groq_key
