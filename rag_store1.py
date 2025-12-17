@@ -158,6 +158,9 @@ def load_products_csv(csv_path: str = "products.csv") -> List[Document]:
             "currency": safe_get(row, "currency"),
             "availability": safe_get(row, "availability"),
             "url": safe_get(row, "url"),
+            "category": safe_get(row, "categories"),
+            "seller_id": safe_get(row, "seller_id"),
+            "delivery": safe_get(row, "delivery"),
         }
         docs.append(Document(page_content=content, metadata=meta))
     return docs
@@ -201,7 +204,7 @@ def build_vectorstore(csv_path: str = "products.csv", faq_json_path: str = "faqs
     return vectordb
 
 @traceable(name="rag_retrieval")
-def get_retriever(persist_directory: str = CHROMA_DIR, k: int = 4):
+def get_retriever(persist_directory: str = CHROMA_DIR, k: int = 2):
     embeddings = HuggingFaceEmbeddings(model_name=HF_EMBEDDING_MODEL)
     vectordb = Chroma(persist_directory=persist_directory, embedding_function=embeddings)
     retriever = vectordb.as_retriever(search_kwargs={"k": k})

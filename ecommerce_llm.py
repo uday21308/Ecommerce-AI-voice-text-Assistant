@@ -1,14 +1,13 @@
 # ecommerce_llm.py
 from dotenv import load_dotenv
 load_dotenv()
-
 import os
 import time
 import re
 from typing import Optional
 from xml.sax.saxutils import escape as xml_escape
 from langsmith import traceable
-from langchain.memory import ConversationBufferMemory
+from langchain.memory import ConversationBufferWindowMemory
 from langchain.prompts import (
     ChatPromptTemplate,
     SystemMessagePromptTemplate,
@@ -17,14 +16,17 @@ from langchain.prompts import (
 )
 from langchain.chains import LLMChain
 from langchain_groq import ChatGroq
-
-# local modules (adjust names if you named them differently)
 from rag_store1 import get_retriever
-from orders import get_order_status
+from orders import get_order_status, create_order
 from tools import search_products
+from returns import get_return_by_order, create_return_request
 
-# Prompt file
 SYSTEM_PROMPT_FILE = "Bot_prompt.txt"
+PLACE_ORDER_KEYWORDS = [
+    "place order", "order now", "buy now",
+    "i want to buy", "purchase", "order this",
+    "place an order"
+]
 ECOMMERCE_KEYWORDS = [
     "buy", "price", "cost", "under", "recommend", "suggest",
     "show", "find", "search",
@@ -33,7 +35,10 @@ ECOMMERCE_KEYWORDS = [
     "discount", "deal", "offer", "sale",
     "return", "refund", "policy", "delivery", "shipping"
 ]
-
+RETURN_KEYWORDS = [
+    "return", "refund", "send back","return order",
+     "want to return","how to return","refund my order"
+    ]
 SMALL_TALK_KEYWORDS = [
     "hi", "hello", "hey", "hiii",
     "thank you", "thanks", "ok thanks",
@@ -41,6 +46,14 @@ SMALL_TALK_KEYWORDS = [
     "can you help", "help me",
     "good morning", "good evening","goodbye"
 ]
+FAQ_KEYWORDS = [
+    "how can i", "how do i", "what is", "policy",
+    "review", "rating", "feedback",
+    "support", "contact",
+    "payment", "refund",
+    "account", "login"
+]
+
 # Order extraction regexes
 ORDER_STRICT = re.compile(r"\bORD\d+\b", flags=re.IGNORECASE)    # matches ORD10009
 ORDER_LOOSE = re.compile(r"(?:order\s*(?:#|id)?\s*[:#]?\s*)([A-Za-z0-9\-_]+)", flags=re.IGNORECASE)
@@ -117,7 +130,7 @@ class EcommerceLLM:
         self.llm = ChatGroq(temperature=temperature, model_name=model_name, groq_api_key=groq_key)
 
         # Memory for conversation (keeps short term chat history)
-        self.memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
+        self.memory = ConversationBufferWindowMemory(memory_key="chat_history", return_messages=True,k=2)
 
         # Load system prompt
         if not os.path.exists(SYSTEM_PROMPT_FILE):
@@ -178,6 +191,13 @@ class EcommerceLLM:
                 return t.upper().strip()
         return None
     
+    def _extract_quantity(self, text: str) -> Optional[int]:
+        m = re.search(r"\b(\d+)\b", text)
+        if m:
+            return int(m.group(1))
+        return 1
+
+
     @traceable(name="ecommerce_llm_process")
     def process(self, text: str) -> str:
         if not text or not text.strip():
@@ -185,9 +205,9 @@ class EcommerceLLM:
 
         lower = text.lower().strip()
 
-    # --------------------------------------------------
-    # 1️⃣ SMALL TALK / GREETINGS → LLM ONLY
-    # --------------------------------------------------
+        # --------------------------------------------------
+        # 1️⃣ SMALL TALK
+        # --------------------------------------------------
         if any(k in lower for k in SMALL_TALK_KEYWORDS):
             try:
                 resp = self.llm.invoke([
@@ -196,73 +216,201 @@ class EcommerceLLM:
                 ])
                 return normalize_whitespace(strip_markdown(resp.content))
             except Exception:
-                return "Hello 😊 I can help with products, orders, and return policies."
+                return "Hello 😊 I can help with products, orders, and returns."
+            
+        # --------------------------------------------------
+        # 2️⃣ RETURN / REFUND INTENT
+        # --------------------------------------------------
+        if any(k in lower for k in RETURN_KEYWORDS):
 
-    # --------------------------------------------------
-    # 2️⃣ ORDER TRACKING INTENT → TOOL
-    # --------------------------------------------------
+            order_id = self._extract_order_id(text)
+
+            # ✅ CASE A: FAQ / POLICY QUESTION (NO ORDER ID)
+            # Example: "How can I return an item?"
+            if not order_id:
+                docs = self.retriever.get_relevant_documents(text)
+                self.last_retrieved = docs
+
+                rag_text = "\n\n".join(d.page_content for d in docs) if docs else ""
+
+                resp = self.chain.invoke({
+                    "input": (
+                        f"User question: {text}\n\n"
+                        f"Return policy documents:\n{rag_text}\n\n"
+                        "Answer clearly and concisely. "
+                        "Do not ask for order ID unless the user wants to create a return."
+                    )
+                })
+
+                out = resp.get("text") if isinstance(resp, dict) else str(resp)
+                return normalize_whitespace(strip_markdown(out))
+
+            # ✅ CASE B: RETURN ACTION (ORDER ID PRESENT)
+            order = get_order_status(order_id)
+            if not order:
+                return f"I could not find order {order_id}. Please verify the order ID."
+
+            # Optional but realistic check
+            if order["status"].lower() != "delivered":
+                return "Only delivered orders are eligible for return."
+
+            existing = get_return_by_order(order_id)
+            if existing:
+                return normalize_whitespace(
+                    f"A return already exists for order {order_id}. "
+                    f"Status: {existing['Return_Status']}."
+                )
+
+            if "because" not in lower:
+                return "Please tell me the reason for return (for example: damaged item, wrong size)."
+
+            reason = text.split("because", 1)[1].strip()
+
+            # ✅ Create return using ORDER DATA
+            created = create_return_request(order, reason)
+
+            self.last_tool = {"type": "create_return", "result": created}
+            self.last_retrieved = []
+
+            return normalize_whitespace(
+                f"Your return request has been created successfully. "
+                f"Order ID: {created['order_id']}. "
+                f"Status: {created['Return_Status']}."
+            )
+
+        # --------------------------------------------------
+        # 3️⃣ ORDER TRACKING INTENT
+        # --------------------------------------------------
         if any(w in lower for w in [
-            "track order", "order status","track my order" "where is my order","track",
-            "track my order", "order update", "order id", "order #"
-            ]):
+            "track order",
+            "order status",
+            "where is my order",
+            "track my order",
+            "order update",
+            "order id",
+            "order #",
+            "order status",
+            "order details",
+            "order info",
+            "order information",
+            "tell me about order",
+            "where is my order",
+            "track my order",
+            "order update",
+            "order id",
+            "order #",
+            "details of order"
+        ]):
             order_id = self._extract_order_id(text)
             if not order_id:
                 return "Sure — please provide your order ID (for example ORD10023)."
 
             status = get_order_status(order_id)
             if not status:
-                return f"I couldn't find an order with id `{order_id}`."
+                return f"I couldn't find an order with id {order_id}."
 
-            reply = (
+            self.last_tool = {"type": "order_status", "result": status}
+            self.last_retrieved = []
+
+            return normalize_whitespace(
                 f"Order {status['order_id']} is currently {status['status']}. "
                 f"Placed on {status['placed_date']}. "
                 f"Estimated delivery: {status['estimated_delivery']}. "
                 f"Total: {status['total_amount']} {status['currency']}."
             )
+        
 
-            self.last_tool = {"type": "order_status", "result": status}
-            self.last_retrieved = []
-            return normalize_whitespace(reply)
+        # ------------------ PLACE ORDER (NEW) ------------------
+        if any(k in lower for k in PLACE_ORDER_KEYWORDS):
+            qty = self._extract_quantity(text)
+            if not qty:
+                return "How many units would you like to order?"
 
-    # --------------------------------------------------
-    # 3️⃣ ECOMMERCE SEARCH INTENT → SEARCH + RAG
-    # --------------------------------------------------
+            products = search_products(text, k=1)
+            if not products:
+                return "I could not find a matching product."
+
+            product = products[0]
+
+            order = create_order(
+                product=product,
+                quantity=qty,
+                user_email="demo.user@email.com",
+                user_name="Demo User"
+            )
+
+            self.last_tool = {"type": "create_order", "result": order}
+
+            return (
+                f"Your order has been placed successfully. "
+                f"Order ID: {order['order_id']}. "
+                f"Total: {order['total_amount']} {order['currency']}. "
+                f"Expected delivery by {order['estimated_delivery']}."
+            )
+        
+        # --------------------------------------------------
+        # 4️⃣ PRODUCT / SEARCH INTENT
+        # --------------------------------------------------
         if any(k in lower for k in ECOMMERCE_KEYWORDS):
             try:
                 results = search_products(text, k=5)
-            except Exception as e:
-                print(f"[ecommerce_llm] search_products error: {e}")
+            except Exception:
                 results = []
 
             self.last_tool = {"type": "search_products", "query": text, "results": results}
 
-            structured_context = "\n".join([
-                f"[{r.get('prod_id')}] {r.get('title')} | {r.get('final_price')} {r.get('currency')}"
-                for r in results if r.get("prod_id")
-                ]) or "No structured product results."
-
             docs = self.retriever.get_relevant_documents(text)
             self.last_retrieved = docs
+
+            structured_context = "\n".join(
+                f"[{r['prod_id']}] {r['title']} | {r['final_price']} {r['currency']}"
+                for r in results if r.get("prod_id")
+            ) or "No products found."
+
             rag_docs_text = "\n\n".join(d.page_content for d in docs) if docs else ""
 
-            combined_input = (
-                f"User query: {text}\n\n"
-            f"Products:\n{structured_context}\n\n"
-            f"Reference docs:\n{rag_docs_text}\n\n"
-            "Answer using ONLY the information above. "
-            "Recommend at most 3 products."
-        )
+            resp = self.chain.invoke({
+                "input": (
+                    f"User query: {text}\n\n"
+                    f"Products:\n{structured_context}\n\n"
+                    f"Reference docs:\n{rag_docs_text}\n\n"
+                    "Answer clearly and concisely."
+                )
+            })
 
-            resp = self.chain.invoke({"input": combined_input})
             out = resp.get("text") if isinstance(resp, dict) else str(resp)
             return normalize_whitespace(strip_markdown(out))
+        
 
-    # --------------------------------------------------
-    # 4️⃣ NON-ECOMMERCE / OUT OF SCOPE
-    # --------------------------------------------------
+        # --------------------------------------------------
+        # 4️⃣ GENERIC FAQ / POLICY (RAG ONLY)
+        # --------------------------------------------------
+        if any(k in lower for k in FAQ_KEYWORDS):
+            docs = self.retriever.get_relevant_documents(text)
+            self.last_retrieved = docs
+            self.last_tool = None
+
+            rag_text = "\n\n".join(d.page_content for d in docs) if docs else ""
+
+            if not rag_text:
+                return "I don’t have that information right now. Please check our help center."
+
+            resp = self.chain.invoke({
+                "input": (
+                    f"User question: {text}\n\n"
+                    f"FAQ documents:\n{rag_text}\n\n"
+                    "Answer clearly and concisely using only the documents."
+                )
+            })
+
+            out = resp.get("text") if isinstance(resp, dict) else str(resp)
+            return normalize_whitespace(strip_markdown(out))
+        
+
+        # --------------------------------------------------
+        # 5️⃣ OUT OF SCOPE
+        # --------------------------------------------------
         return (
-        "I can help with ecommerce-related questions like products, orders, "
-        "returns, and delivery information. Please ask something related to shopping."
-    )
-
-
+            "I can help with ecommerce-related questions such as products, "
+            "orders, returns, and delivery information."
+        )
