@@ -4,6 +4,7 @@ A real-time AI-powered ecommerce voice assistant that allows users to interact t
 The system combines LLMs, Retrieval-Augmented Generation (RAG), browser-based speech interfaces, and backend decision logic to deliver a complete conversational commerce experience.
 
 
+
 📌 Project Overview
 
 Voice-based interfaces are becoming a critical interaction channel in digital commerce.
@@ -18,6 +19,7 @@ This project demonstrates an end-to-end AI voicebot capable of:
 
 This implementation focuses on clarity, modular design, and real-world ecommerce use cases.
 
+
 🎯 Key Features
 
 🎤 Voice Interaction (Browser STT + TTS)
@@ -30,6 +32,8 @@ This implementation focuses on clarity, modular design, and real-world ecommerce
 🧑‍💻 Modern UI (React + Tailwind CSS)
 🧩 Modular Backend Architecture
 📊 Observability-ready (LangSmith compatible)
+
+
 
 🏗️ System Architecture
 
@@ -56,6 +60,8 @@ RAG Flow:
 User Query → Embed → Vector DB (Chroma)
            → Retrieve relevant products / FAQs
            → Inject into LLM prompt
+
+
 
 🧩 Features Implemented
 
@@ -95,6 +101,9 @@ User Query → Embed → Vector DB (Chroma)
 -Speaking avatar with waveform animation
 -Tool transparency panel
 
+
+
+
 🗂️ Project Structure
 Demo_Voicebot/
 │
@@ -129,6 +138,9 @@ Demo_Voicebot/
 └── README.md
 
 
+
+
+
 🔊 Supported User Scenarios
 
 ✅ Informational Queries
@@ -142,6 +154,9 @@ Demo_Voicebot/
 
 ✅ Small Talk / Assistance
 “Hi, can you help me?”
+
+
+
 
 ⚙️ Setup Instructions
 
