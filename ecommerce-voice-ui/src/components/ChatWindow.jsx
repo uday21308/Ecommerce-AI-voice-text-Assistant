@@ -1,4 +1,4 @@
-import { useRef, useState } from "react"
+import { useRef, useState, useEffect } from "react"
 import { API_BASE_URL } from "../config"
 import botAvatar from "../assets/bot_avatar.png"
 import SpeakingWaveform from "./SpeakingWaveform"
@@ -13,20 +13,25 @@ export default function ChatWindow({
   onSpeak
 }) {
   const inputRef = useRef(null)
+  const bottomRef = useRef(null)
+
   const [listening, setListening] = useState(false)
   const [speaking, setSpeaking] = useState(false)
 
+  // 🔽 Auto-scroll when messages or loading change
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({ behavior: "smooth" })
+  }, [messages, loading])
+
   // 🎤 Browser Speech-to-Text
   const startVoice = () => {
-    if ("speechSynthesis" in window) {
-      window.speechSynthesis.cancel()
-    }
+    window.speechSynthesis.cancel()
 
     const SpeechRecognition =
       window.SpeechRecognition || window.webkitSpeechRecognition
 
     if (!SpeechRecognition) {
-      alert("Speech recognition not supported in this browser")
+      alert("Speech recognition not supported")
       return
     }
 
@@ -39,7 +44,6 @@ export default function ChatWindow({
 
     recognition.onstart = () => setListening(true)
     recognition.onend = () => setListening(false)
-
     recognition.onerror = () => setListening(false)
 
     recognition.onresult = (e) => {
@@ -48,6 +52,22 @@ export default function ChatWindow({
     }
 
     recognition.start()
+  }
+
+  // 🔊 Speak with REAL lifecycle tracking
+  const speakWithWaveform = (text) => {
+    if (!("speechSynthesis" in window)) return
+
+    window.speechSynthesis.cancel()
+
+    const utterance = new SpeechSynthesisUtterance(text)
+    utterance.lang = "en-US"
+
+    utterance.onstart = () => setSpeaking(true)
+    utterance.onend = () => setSpeaking(false)
+    utterance.onerror = () => setSpeaking(false)
+
+    window.speechSynthesis.speak(utterance)
   }
 
   // 💬 Send Message
@@ -72,12 +92,8 @@ export default function ChatWindow({
       setToolInfo(data.last_tool || null)
       setRetrievedDocs(data.retrieved_docs || [])
 
-      setSpeaking(true)
-      onSpeak?.(data.reply)
+      speakWithWaveform(data.reply)
 
-      setTimeout(() => {
-        setSpeaking(false)
-      }, Math.min(4000, data.reply.length * 40))
     } catch {
       setMessages(prev => [
         ...prev,
@@ -90,12 +106,12 @@ export default function ChatWindow({
 
   return (
     <>
-      {/* Messages */}
+      {/* 💬 Messages */}
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
         {messages.map((m, i) => (
           <div
             key={i}
-            className={`flex items-end gap-2 animate-fadeInUp ${
+            className={`flex items-end gap-2 ${
               m.role === "user" ? "justify-end" : "justify-start"
             }`}
           >
@@ -105,7 +121,7 @@ export default function ChatWindow({
                   src={botAvatar}
                   alt="bot"
                   className={`w-8 h-8 rounded-full ${
-                    speaking ? "ring-2 ring-blue-400" : ""
+                    speaking ? "ring-2 ring-blue-400 animate-pulse" : ""
                   }`}
                 />
                 {speaking && <SpeakingWaveform />}
@@ -113,10 +129,10 @@ export default function ChatWindow({
             )}
 
             <div
-              className={`max-w-[75%] px-4 py-2 rounded-2xl text-sm shadow-sm ${
+              className={`max-w-[75%] px-4 py-2 rounded-2xl text-[14px] leading-relaxed font-medium ${
                 m.role === "user"
-                  ? "bg-blue-600 text-white rounded-br-sm"
-                  : "bg-gray-100 text-gray-800 rounded-bl-sm"
+                  ? "bg-gradient-to-r from-blue-500 to-indigo-500 text-white"
+                  : "bg-white/80 text-gray-800 backdrop-blur border border-gray-200"
               }`}
             >
               {m.text}
@@ -125,25 +141,27 @@ export default function ChatWindow({
         ))}
 
         {loading && (
-          <div className="flex items-center gap-2 text-gray-400 text-sm">
-            <span className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></span>
-            <span className="w-2 h-2 bg-gray-400 rounded-full animate-bounce delay-150"></span>
-            <span className="w-2 h-2 bg-gray-400 rounded-full animate-bounce delay-300"></span>
+          <div className="flex items-center gap-2 text-gray-500 text-sm animate-pulse">
+            <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+            <span className="w-2 h-2 bg-indigo-400 rounded-full"></span>
+            <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
             Assistant is thinking…
           </div>
         )}
+
+        {/* ⬇️ Scroll Anchor */}
+        <div ref={bottomRef} />
       </div>
 
-      {/* Input */}
+      {/* ⌨️ Input */}
       <div className="border-t p-3 flex items-center gap-2 bg-white">
         <button
           onClick={startVoice}
-          className={`p-3 rounded-full transition-all duration-200 ${
+          className={`p-3 rounded-full transition-all duration-300 ${
             listening
               ? "bg-red-500 text-white animate-pulse scale-110"
-              : "bg-gray-200 hover:bg-gray-300"
+              : "bg-white shadow hover:shadow-md"
           }`}
-          title="Speak"
         >
           🎤
         </button>
@@ -152,13 +170,14 @@ export default function ChatWindow({
           ref={inputRef}
           type="text"
           placeholder="Type a message…"
-          className="flex-1 border rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-blue-400"
+          className="flex-1 border rounded-xl px-4 py-2.5 text-sm font-medium
+placeholder:text-gray-400 focus:ring-2 focus:ring-blue-400 outline-none"
           onKeyDown={(e) => e.key === "Enter" && sendMessage()}
         />
 
         <button
           onClick={() => sendMessage()}
-          className="bg-blue-600 hover:bg-blue-700 transition text-white px-4 py-2 rounded-lg"
+          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg"
         >
           Send
         </button>
