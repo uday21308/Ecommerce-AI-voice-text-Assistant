@@ -1,43 +1,45 @@
-🛒 Ecommerce AI Voice Assistant
+# 🛒 Ecommerce AI Voice Assistant
 
-A real-time AI-powered ecommerce voice assistant that allows users to interact through text and voice, ask about products, check return policies, and track orders.
-The system combines LLMs, Retrieval-Augmented Generation (RAG), browser-based speech interfaces, and backend decision logic to deliver a complete conversational commerce experience.
+A real-time AI-powered ecommerce assistant that allows users to interact through **text and voice**, ask about products, check return policies, and track orders.
 
+The system combines **Large Language Models (LLMs)**, **Retrieval-Augmented Generation (RAG)**, **browser-based speech interfaces**, and **backend decision logic** to deliver a complete conversational commerce experience.
 
+---
 
-📌 Project Overview
+## 📌 Project Overview
 
-Voice-based interfaces are becoming a critical interaction channel in digital commerce.
+Voice-based interfaces are becoming a critical interaction channel in digital commerce.  
 This project demonstrates an end-to-end AI voicebot capable of:
 
--Understanding spoken or typed customer queries
--Answering ecommerce-related questions
--Recommending products
--Tracking orders using mock backend data
--Responding with synthesized speech
--Showing transparency via tool usage and retrieved context
+- Understanding spoken or typed customer queries  
+- Answering ecommerce-related questions  
+- Recommending products  
+- Tracking orders using mock backend data  
+- Responding with synthesized speech  
+- Showing transparency via tool usage and retrieved context  
 
-This implementation focuses on clarity, modular design, and real-world ecommerce use cases.
+This implementation focuses on **clarity**, **modular design**, and **real-world ecommerce use cases**.
 
+---
 
-🎯 Key Features
+## 🎯 Key Features
 
-🎤 Voice Interaction (Browser STT + TTS)
-💬 Text Chat Interface
-🧠 LLM-driven Conversational Intelligence
-📚 Retrieval-Augmented Generation (RAG)
-🛍️ Product Search & Recommendation
-📦 Order Tracking via Backend Logic
-🔍 Tool & Context Transparency Panel
-🧑‍💻 Modern UI (React + Tailwind CSS)
-🧩 Modular Backend Architecture
-📊 Observability-ready (LangSmith compatible)
+- 🎤 Voice Interaction (Browser STT + TTS)  
+- 💬 Text Chat Interface  
+- 🧠 LLM-driven Conversational Intelligence  
+- 📚 Retrieval-Augmented Generation (RAG)  
+- 🛍️ Product Search & Recommendation  
+- 📦 Order Tracking via Backend Logic  
+- 🔍 Tool & Context Transparency Panel  
+- 🧑‍💻 Modern UI (React + Tailwind CSS)  
+- 🧩 Modular Backend Architecture  
+- 📊 Observability-ready (LangSmith compatible)  
 
+---
 
+## 🏗️ System Architecture
 
-🏗️ System Architecture
-
-Voice / Text Flow:
+### Voice / Text Interaction Flow
 
 User (Voice / Text)
       ↓
