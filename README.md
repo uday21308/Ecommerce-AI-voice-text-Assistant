@@ -88,9 +88,10 @@ User Query → Embed → Vector DB (Chroma)
 - Context grounding to reduce hallucinations  
 
 ### ✅ Backend Actions (Tools)
-- Order tracking using mock `orders.csv`  
-- Product search using structured data  
-- Intent-based tool routing  
+- 📦 Order tracking using mock `orders.csv`
+- 🔄 Returns & refunds management using `returns.csv`
+- 🛍️ Product search from structured catalog
+- 🧠 Intent-based routing with safe fallbacks
 
 ### ✅ Observability
 - LangSmith tracing enabled  
@@ -160,6 +161,12 @@ Demo_Voicebot/
 
 ### Small Talk / Assistance
 “Hi, can you help me?”
+
+### Returns & Refunds
+“Return order ORD10012 because of size issue”
+
+### Order Placement
+“Place an order for HANPOSH Men Watches”
 
 
 
