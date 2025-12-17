@@ -40,7 +40,7 @@ This implementation focuses on **clarity**, **modular design**, and **real-world
 ## 🏗️ System Architecture
 
 ### Voice / Text Interaction Flow
-
+```markdown
 User (Voice / Text)
       ↓
 Browser Speech-to-Text (Web Speech API)
@@ -57,7 +57,7 @@ LLM Response (Groq)
 Text-to-Speech (Browser TTS)
       ↓
 User hears response
-
+```
 
 ###RAG Flow:
 User Query → Embed → Vector DB (Chroma)
