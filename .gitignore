@@ -1,0 +1,33 @@
+myenv/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+
+# Secrets
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+chroma_db
+
+agent.py
+
+Chat_Bot.py
+chat_cli.py
+ecom_stt.py
+ecom_tts.py
+get_voices.py
+llm.py
+speech_to_text.py
+test.py
+text_to_speech.py
+Voice_Bot.py
+voice_cli.py
+voice_tts.py
+
+
+frontend

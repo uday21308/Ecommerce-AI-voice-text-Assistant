@@ -1,0 +1,201 @@
+order_id,user_email,user_name,items,total_amount,currency,status,placed_date,estimated_delivery
+ORD10001,user1@example.com,User 1,"[{'prod_id': 'A1NM6DL7S92CZW', 'qty': 2}, {'prod_id': 'A14YM892528UG', 'qty': 2}, {'prod_id': 'A31B1NF333K7B', 'qty': 2}]",91713.47,INR,Out for delivery,30-12-2024,08-01-2025
+ORD10002,user2@example.com,User 2,"[{'prod_id': 'A1D23EF28YI2M8', 'qty': 1}, {'prod_id': 'A8I5XXC4M5TN1', 'qty': 1}]",82090.29,INR,Returned,18-11-2023,21-11-2023
+ORD10003,user3@example.com,User 3,"[{'prod_id': 'AEM3N5YOXGQBK', 'qty': 2}]",94946.33,INR,Shipped,10-02-2025,21-02-2025
+ORD10004,user4@example.com,User 4,"[{'prod_id': 'A30DCH6PPMVYFV', 'qty': 2}, {'prod_id': 'A13KU9WJWV4RMN', 'qty': 2}, {'prod_id': 'AHR0K3XXSXUQY', 'qty': 2}]",129138.79,INR,Delivered,05-03-2023,11-03-2023
+ORD10005,user5@example.com,User 5,"[{'prod_id': 'A1SB5FRTIFMLKE', 'qty': 1}]",63105.43,INR,Cancelled,21-08-2024,24-08-2024
+ORD10006,user6@example.com,User 6,"[{'prod_id': 'A1J9XHX48UC47C', 'qty': 1}, {'prod_id': 'A21GN93WT7I20T', 'qty': 2}]",58006.22,INR,Shipped,31-05-2024,11-06-2024
+ORD10007,user7@example.com,User 7,"[{'prod_id': 'AR7H1RL9GCUCS', 'qty': 2}, {'prod_id': 'A3NX7HVRPCDO7', 'qty': 2}, {'prod_id': 'A2ZMJXQW622XKA', 'qty': 2}]",70077.4,INR,Shipped,17-07-2024,23-07-2024
+ORD10008,user8@example.com,User 8,"[{'prod_id': 'ALSPGD5KDMVR1', 'qty': 1}, {'prod_id': 'A3A58L71T65LXI', 'qty': 1}]",2209.1,INR,Out for delivery,18-08-2024,25-08-2024
+ORD10009,user9@example.com,User 9,"[{'prod_id': 'A23ADOZFIJNPFB', 'qty': 1}]",90690.63,INR,Cancelled,12-08-2023,17-08-2023
+ORD10010,user10@example.com,User 10,"[{'prod_id': 'A2QLQO18REI9CS', 'qty': 1}, {'prod_id': 'A3P3RK2BLPB74R', 'qty': 2}, {'prod_id': 'A3DLJ270MN1IDF', 'qty': 2}]",62455.44,INR,Cancelled,22-02-2023,25-02-2023
+ORD10011,user11@example.com,User 11,"[{'prod_id': 'A66CM77SR3PSW', 'qty': 1}, {'prod_id': 'A37FG5AOU109PM', 'qty': 2}, {'prod_id': 'A3EBJY5W3PG8JD', 'qty': 2}]",67274.38,INR,Returned,20-10-2023,25-10-2023
+ORD10012,user12@example.com,User 12,"[{'prod_id': 'A2HD03YRNPP9UN', 'qty': 1}, {'prod_id': 'A18VBPJYTAGNYD', 'qty': 1}, {'prod_id': 'A31WKMOCHQ535K', 'qty': 1}]",27411.08,INR,Cancelled,11-06-2024,21-06-2024
+ORD10013,user13@example.com,User 13,"[{'prod_id': 'ALX13VLX17EYM', 'qty': 1}, {'prod_id': 'A3E9SVC4GWPUCM', 'qty': 2}, {'prod_id': 'A2MHBXIWTMKN13', 'qty': 2}]",1760.5,INR,Out for delivery,20-08-2023,01-09-2023
+ORD10014,user14@example.com,User 14,"[{'prod_id': 'A1L987OQZSDIXN', 'qty': 1}]",27139.68,INR,Out for delivery,21-09-2024,28-09-2024
+ORD10015,user15@example.com,User 15,"[{'prod_id': 'A3E7FWJQ7VKH9I', 'qty': 2}, {'prod_id': 'A89O5H5BYD5X7', 'qty': 2}, {'prod_id': 'A314AM84MLRHAV', 'qty': 2}]",68921.69,INR,Delivered,09-04-2024,13-04-2024
+ORD10016,user16@example.com,User 16,"[{'prod_id': 'A31KZCHGVCZ1NN', 'qty': 1}, {'prod_id': 'A3NX7HVRPCDO7', 'qty': 2}, {'prod_id': 'A3E7FWJQ7VKH9I', 'qty': 1}]",100527.32,INR,Out for delivery,06-11-2024,18-11-2024
+ORD10017,user17@example.com,User 17,"[{'prod_id': 'A2ILS075DPOZBM', 'qty': 1}]",69443.84,INR,Out for delivery,26-12-2023,01-01-2024
+ORD10018,user18@example.com,User 18,"[{'prod_id': 'A1968ZRKH34QWP', 'qty': 2}, {'prod_id': 'A34V3O18ZYGJY', 'qty': 1}, {'prod_id': 'A3DGWYQANTD54D', 'qty': 1}, {'prod_id': 'A2B3F21QCE7PVV', 'qty': 1}]",102377.39,INR,Out for delivery,10-11-2023,21-11-2023
+ORD10019,user19@example.com,User 19,"[{'prod_id': 'A1TUEZAEMIJGDS', 'qty': 2}]",19091.13,INR,Out for delivery,23-08-2025,03-09-2025
+ORD10020,user20@example.com,User 20,"[{'prod_id': 'A1HTBWL1H15R7Q', 'qty': 1}, {'prod_id': 'A3SK2MLF5EY2X0', 'qty': 2}]",42763.25,INR,Out for delivery,01-03-2024,10-03-2024
+ORD10021,user21@example.com,User 21,"[{'prod_id': 'ARUAYKUGCU14', 'qty': 1}, {'prod_id': 'A126824KIOA8L8', 'qty': 1}]",660.3,INR,Out for delivery,13-07-2023,22-07-2023
+ORD10022,user22@example.com,User 22,"[{'prod_id': 'A2VVUDAAFOKHEP', 'qty': 1}, {'prod_id': 'A8A1WPD6VSRQD', 'qty': 1}]",4168.02,INR,Shipped,28-10-2024,01-11-2024
+ORD10023,user23@example.com,User 23,"[{'prod_id': 'A3GJOTZ9BBXMZO', 'qty': 2}, {'prod_id': 'A1DLGQ2EA87SKN', 'qty': 1}, {'prod_id': 'A2RVOV2NNUFAH4', 'qty': 1}]",118428.8,INR,Returned,24-12-2023,02-01-2024
+ORD10024,user24@example.com,User 24,"[{'prod_id': 'A2RVOV2NNUFAH4', 'qty': 1}]",88893.34,INR,Cancelled,13-07-2024,19-07-2024
+ORD10025,user25@example.com,User 25,"[{'prod_id': 'AE1A1GREFL29I', 'qty': 1}, {'prod_id': 'A3PRCTS1EYPJ0Q', 'qty': 1}, {'prod_id': 'A1CJPE2GAYF44M', 'qty': 2}]",28699.77,INR,Delivered,11-02-2025,23-02-2025
+ORD10026,user26@example.com,User 26,"[{'prod_id': 'A3UOJSBX6B13WX', 'qty': 1}, {'prod_id': 'A3BE29AW4NPWLV', 'qty': 1}]",72892.23,INR,Delivered,07-02-2023,15-02-2023
+ORD10027,user27@example.com,User 27,"[{'prod_id': 'A21Q9KETGWAYSK', 'qty': 1}, {'prod_id': 'A3P1JI9UX2MKYC', 'qty': 2}, {'prod_id': 'A37Z7NHR3PTBT3', 'qty': 2}, {'prod_id': 'AMCHAM5Q2NJAF', 'qty': 2}]",95932.13,INR,Delivered,04-08-2025,15-08-2025
+ORD10028,user28@example.com,User 28,"[{'prod_id': 'ACWEESXPOUU44', 'qty': 1}]",110311.11,INR,Delivered,25-10-2023,28-10-2023
+ORD10029,user29@example.com,User 29,"[{'prod_id': 'A2ILS075DPOZBM', 'qty': 2}, {'prod_id': 'A1NJL0M3S0GAN0', 'qty': 1}, {'prod_id': 'A1TWYVWG4QDVKK', 'qty': 2}, {'prod_id': 'A1NM6DL7S92CZW', 'qty': 1}]",47139.8,INR,Shipped,13-05-2025,18-05-2025
+ORD10030,user30@example.com,User 30,"[{'prod_id': 'A2ZT6EYZ1NCZN5', 'qty': 1}, {'prod_id': 'A3NB9K9ZPPL603', 'qty': 1}, {'prod_id': 'A1EBMT5DFO2LTB', 'qty': 1}, {'prod_id': 'A3H5E05B62LL26', 'qty': 2}]",100204.83,INR,Delivered,28-03-2025,31-03-2025
+ORD10031,user31@example.com,User 31,"[{'prod_id': 'AA6MR5993HU8E', 'qty': 1}, {'prod_id': 'A3EYKY63ZM0XR2', 'qty': 1}]",65042.95,INR,Returned,14-10-2024,17-10-2024
+ORD10032,user32@example.com,User 32,"[{'prod_id': 'AYC4XZVI5T71S', 'qty': 2}, {'prod_id': 'A3UNYF78MGMXY1', 'qty': 2}, {'prod_id': 'AWHDNWL09N6GA', 'qty': 2}]",123926.2,INR,Cancelled,06-08-2025,14-08-2025
+ORD10033,user33@example.com,User 33,"[{'prod_id': 'A18VBPJYTAGNYD', 'qty': 1}]",82529.8,INR,Cancelled,10-09-2025,19-09-2025
+ORD10034,user34@example.com,User 34,"[{'prod_id': 'A1L2D0JXJ1KQ2', 'qty': 2}, {'prod_id': 'A2EJCTH67GJMT3', 'qty': 2}, {'prod_id': 'A13JMFK29CHBVA', 'qty': 2}]",90191.45,INR,Out for delivery,12-06-2024,24-06-2024
+ORD10035,user35@example.com,User 35,"[{'prod_id': 'A2BPZDMB8EJ53L', 'qty': 2}, {'prod_id': 'A1IDRPQXCHJNGS', 'qty': 1}, {'prod_id': 'A3SFXKRLH2TWAY', 'qty': 1}]",148874.89,INR,Shipped,03-08-2024,13-08-2024
+ORD10036,user36@example.com,User 36,"[{'prod_id': 'A3K90JHFOGRITA', 'qty': 2}, {'prod_id': 'A2C3RODLQF9LKE', 'qty': 2}, {'prod_id': 'A2EPE15NO912P', 'qty': 2}]",64875.54,INR,Returned,27-04-2025,04-05-2025
+ORD10037,user37@example.com,User 37,"[{'prod_id': 'A3PRCTS1EYPJ0Q', 'qty': 2}, {'prod_id': 'A8ZGEU9IICUKG', 'qty': 1}, {'prod_id': 'A1LJQB0JA6R2YV', 'qty': 2}, {'prod_id': 'A3OI2BY0LW715', 'qty': 1}]",63116.39,INR,Shipped,12-03-2024,16-03-2024
+ORD10038,user38@example.com,User 38,"[{'prod_id': 'A1YWE81IRGJKWN', 'qty': 2}, {'prod_id': 'A1K42DQWPWI3SR', 'qty': 2}, {'prod_id': 'ANHI4QTZXXB35', 'qty': 1}, {'prod_id': 'A1J7J35LVGBFWC', 'qty': 2}]",52920.24,INR,Returned,04-03-2023,07-03-2023
+ORD10039,user39@example.com,User 39,"[{'prod_id': 'A1J28T6E1D4WPU', 'qty': 1}]",149460.38,INR,Out for delivery,29-04-2024,07-05-2024
+ORD10040,user40@example.com,User 40,"[{'prod_id': 'A1W1R41WY42187', 'qty': 2}, {'prod_id': 'A1AT2TDCUHREG8', 'qty': 1}, {'prod_id': 'A3K3MFCYLEESH8', 'qty': 2}]",60974.63,INR,Delivered,26-04-2024,02-05-2024
+ORD10041,user41@example.com,User 41,"[{'prod_id': 'A3P1JI9UX2MKYC', 'qty': 2}, {'prod_id': 'A173GE3WA26NL0', 'qty': 1}, {'prod_id': 'A35T5301S0B422', 'qty': 2}]",79812.23,INR,Shipped,19-09-2024,26-09-2024
+ORD10042,user42@example.com,User 42,"[{'prod_id': 'A3FT3NRVQ52555', 'qty': 1}, {'prod_id': 'AYBHI2AQPIRDU', 'qty': 2}, {'prod_id': 'A3DQY03E03JMV9', 'qty': 2}, {'prod_id': 'A2OZPK48BNQD3K', 'qty': 2}]",143540.29,INR,Cancelled,14-04-2023,17-04-2023
+ORD10043,user43@example.com,User 43,"[{'prod_id': 'A80BP8MYR5C3', 'qty': 2}, {'prod_id': 'A1AGKLLM3L94XD', 'qty': 1}, {'prod_id': 'AAOH2ETJ8PDPW', 'qty': 2}]",78197.76,INR,Out for delivery,07-05-2024,15-05-2024
+ORD10044,user44@example.com,User 44,"[{'prod_id': 'A1QXSSWQK5W30L', 'qty': 1}, {'prod_id': 'A1KLTFWR9E1TCO', 'qty': 1}, {'prod_id': 'A1RP79F1SWDMZH', 'qty': 2}]",68870.9,INR,Delivered,13-02-2025,21-02-2025
+ORD10045,user45@example.com,User 45,"[{'prod_id': 'A1Y8O3H17CH952', 'qty': 1}]",112517.06,INR,Delivered,02-12-2024,12-12-2024
+ORD10046,user46@example.com,User 46,"[{'prod_id': 'A1968ZRKH34QWP', 'qty': 1}, {'prod_id': 'A12780V2RWO0DW', 'qty': 2}, {'prod_id': 'A3JYODG1N7JTWY', 'qty': 1}]",129109.03,INR,Cancelled,26-02-2025,08-03-2025
+ORD10047,user47@example.com,User 47,"[{'prod_id': 'A1GL48MCCW80M9', 'qty': 1}, {'prod_id': 'A1BS10OJUM0ECV', 'qty': 2}, {'prod_id': 'A1KRYSMJ8GAFXD', 'qty': 1}, {'prod_id': 'ALKKBKP6T3D45', 'qty': 1}]",84152.52,INR,Out for delivery,22-11-2023,28-11-2023
+ORD10048,user48@example.com,User 48,"[{'prod_id': 'A2CFFHGHZ3ZRFJ', 'qty': 1}, {'prod_id': 'A15XO3LDES90J8', 'qty': 1}, {'prod_id': 'A18VBPJYTAGNYD', 'qty': 1}, {'prod_id': 'A1D4E5VZFJTG5G', 'qty': 2}]",39171.91,INR,Out for delivery,15-05-2023,18-05-2023
+ORD10049,user49@example.com,User 49,"[{'prod_id': 'A302R18OBQDPX5', 'qty': 2}, {'prod_id': 'A3EBJY5W3PG8JD', 'qty': 1}]",99230.03,INR,Out for delivery,14-12-2024,24-12-2024
+ORD10050,user50@example.com,User 50,"[{'prod_id': 'A1I4V640HSOLK3', 'qty': 1}]",83941.12,INR,Out for delivery,23-09-2024,29-09-2024
+ORD10051,user51@example.com,User 51,"[{'prod_id': 'AB281S4PJ2W6T', 'qty': 1}, {'prod_id': 'A5F5YFQBNTWVE', 'qty': 1}, {'prod_id': 'A1R2LN4EZ9SAP8', 'qty': 2}]",59016.69,INR,Cancelled,27-01-2023,04-02-2023
+ORD10052,user52@example.com,User 52,"[{'prod_id': 'A15A341J4Q8LM6', 'qty': 1}]",139403.44,INR,Delivered,16-11-2024,24-11-2024
+ORD10053,user53@example.com,User 53,"[{'prod_id': 'A3UOJSBX6B13WX', 'qty': 2}, {'prod_id': 'A2UUWCCR4G5EFA', 'qty': 1}, {'prod_id': 'ANHI4QTZXXB35', 'qty': 1}]",21314.3,INR,Processing,23-01-2023,26-01-2023
+ORD10054,user54@example.com,User 54,"[{'prod_id': 'A2JWZC447DF3BB', 'qty': 2}, {'prod_id': 'A159LIUNX2QVOR', 'qty': 1}, {'prod_id': 'A2BGAAOURAL9O6', 'qty': 1}, {'prod_id': 'A1SEEPS9IE4N2S', 'qty': 2}]",4931.16,INR,Shipped,07-01-2024,12-01-2024
+ORD10055,user55@example.com,User 55,"[{'prod_id': 'A1DXN92KCKEQV4', 'qty': 1}, {'prod_id': 'A3P1JI9UX2MKYC', 'qty': 2}, {'prod_id': 'A2ZMJXQW622XKA', 'qty': 1}, {'prod_id': 'A1J7J35LVGBFWC', 'qty': 1}]",30011.8,INR,Processing,04-06-2024,11-06-2024
+ORD10056,user56@example.com,User 56,"[{'prod_id': 'A3UNYF78MGMXY1', 'qty': 2}, {'prod_id': 'A1EGARJ6W37Z1', 'qty': 2}, {'prod_id': 'A3SFXKRLH2TWAY', 'qty': 2}]",56010.22,INR,Shipped,26-06-2024,05-07-2024
+ORD10057,user57@example.com,User 57,"[{'prod_id': 'A1DLGQ2EA87SKN', 'qty': 2}, {'prod_id': 'A3K1R6O2PZ6DMJ', 'qty': 1}, {'prod_id': 'A2DVT4KZAUD5GA', 'qty': 1}, {'prod_id': 'A1EA4W4NX7SS7Y', 'qty': 2}]",89884.33,INR,Cancelled,20-07-2023,01-08-2023
+ORD10058,user58@example.com,User 58,"[{'prod_id': 'A2HH0EC9LLBU7F', 'qty': 2}]",30167.43,INR,Processing,29-08-2025,04-09-2025
+ORD10059,user59@example.com,User 59,"[{'prod_id': 'A1WP6XZTWPB0UF', 'qty': 1}, {'prod_id': 'A1FNXIVVNRHB2X', 'qty': 2}, {'prod_id': 'A8UTNA5ZN9XBT', 'qty': 1}, {'prod_id': 'A1X3VW8YT3FDWQ', 'qty': 1}]",29505.03,INR,Cancelled,28-02-2023,11-03-2023
+ORD10060,user60@example.com,User 60,"[{'prod_id': 'A1LCRUYFBJF2WZ', 'qty': 2}]",18540.32,INR,Cancelled,25-06-2024,02-07-2024
+ORD10061,user61@example.com,User 61,"[{'prod_id': 'A1LCRUYFBJF2WZ', 'qty': 2}]",74165.27,INR,Cancelled,11-02-2025,19-02-2025
+ORD10062,user62@example.com,User 62,"[{'prod_id': 'A12780V2RWO0DW', 'qty': 2}, {'prod_id': 'A1EA4W4NX7SS7Y', 'qty': 1}, {'prod_id': 'A2I00EBEBYMKDS', 'qty': 1}, {'prod_id': 'A1LCRUYFBJF2WZ', 'qty': 2}]",95329.43,INR,Returned,01-07-2024,10-07-2024
+ORD10063,user63@example.com,User 63,"[{'prod_id': 'A23O8WN1PWUXRO', 'qty': 1}, {'prod_id': 'A12NTYNRXW6BWG', 'qty': 2}, {'prod_id': 'A2MHBXIWTMKN13', 'qty': 1}, {'prod_id': 'A3KJ4RV3CFD61F', 'qty': 2}]",27100,INR,Cancelled,13-02-2025,18-02-2025
+ORD10064,user64@example.com,User 64,"[{'prod_id': 'AL3E9JOFZX9RW', 'qty': 1}, {'prod_id': 'A89O5H5BYD5X7', 'qty': 1}, {'prod_id': 'A2Y6FN0DQVG9IC', 'qty': 2}]",129537.45,INR,Shipped,22-02-2025,03-03-2025
+ORD10065,user65@example.com,User 65,"[{'prod_id': 'A2HSWZJNO2ABVT', 'qty': 1}, {'prod_id': 'A3LDTJ3E5OVZO1', 'qty': 2}]",84953.85,INR,Cancelled,29-06-2024,09-07-2024
+ORD10066,user66@example.com,User 66,"[{'prod_id': 'A3GJOTZ9BBXMZO', 'qty': 1}, {'prod_id': 'A3JYODG1N7JTWY', 'qty': 1}]",21488.79,INR,Out for delivery,22-04-2025,25-04-2025
+ORD10067,user67@example.com,User 67,"[{'prod_id': 'A3OI2BY0LW715', 'qty': 2}]",27976.22,INR,Delivered,03-11-2024,13-11-2024
+ORD10068,user68@example.com,User 68,"[{'prod_id': 'A3E9SVC4GWPUCM', 'qty': 2}, {'prod_id': 'ASEVS99O6FS73', 'qty': 1}, {'prod_id': 'A3AZM2JWLVPIMB', 'qty': 2}]",82917.89,INR,Delivered,11-12-2023,21-12-2023
+ORD10069,user69@example.com,User 69,"[{'prod_id': 'A1NPAOJVVJJ9EZ', 'qty': 1}, {'prod_id': 'A2ZSJ33QWA8XM2', 'qty': 2}]",20289.26,INR,Shipped,23-09-2025,03-10-2025
+ORD10070,user70@example.com,User 70,"[{'prod_id': 'A28XJCH6YDL7O', 'qty': 2}]",64139.03,INR,Cancelled,01-12-2024,10-12-2024
+ORD10071,user71@example.com,User 71,"[{'prod_id': 'A3HI6H9HIU7T28', 'qty': 2}, {'prod_id': 'A3DFAS4Y8FI1D0', 'qty': 1}, {'prod_id': 'A25DCVYS8S4ML8', 'qty': 1}, {'prod_id': 'AX2RYB2N0YL63', 'qty': 2}]",12976.55,INR,Shipped,24-01-2025,28-01-2025
+ORD10072,user72@example.com,User 72,"[{'prod_id': 'A3OUDPJCHZLQ3L', 'qty': 2}, {'prod_id': 'A2ILS075DPOZBM', 'qty': 1}, {'prod_id': 'A3351LRKCGV34N', 'qty': 2}]",132103.74,INR,Shipped,11-09-2024,16-09-2024
+ORD10073,user73@example.com,User 73,"[{'prod_id': 'A8J09E2FDMZCY', 'qty': 1}, {'prod_id': 'A38SYBCXMXFCZS', 'qty': 1}, {'prod_id': 'A28SR133EEIBQN', 'qty': 2}, {'prod_id': 'AGCBFSJ4B9UIH', 'qty': 1}]",1958.84,INR,Returned,27-04-2024,01-05-2024
+ORD10074,user74@example.com,User 74,"[{'prod_id': 'A3K3MFCYLEESH8', 'qty': 2}, {'prod_id': 'A2NEM58BFPMEIL', 'qty': 2}, {'prod_id': 'A3EGP08XFW0RSH', 'qty': 1}]",149118.97,INR,Returned,09-09-2023,16-09-2023
+ORD10075,user75@example.com,User 75,"[{'prod_id': 'A2N4REE8VQNAQQ', 'qty': 2}]",31371.74,INR,Processing,22-01-2024,28-01-2024
+ORD10076,user76@example.com,User 76,"[{'prod_id': 'ASER3BNGLPVEW', 'qty': 2}]",67875.33,INR,Shipped,24-07-2025,05-08-2025
+ORD10077,user77@example.com,User 77,"[{'prod_id': 'A28UJHQNAD0UAY', 'qty': 1}, {'prod_id': 'A3T4T2MY0U1XKM', 'qty': 2}]",72564.97,INR,Shipped,15-06-2025,27-06-2025
+ORD10078,user78@example.com,User 78,"[{'prod_id': 'A2BGAAOURAL9O6', 'qty': 2}, {'prod_id': 'A3P1JI9UX2MKYC', 'qty': 2}]",11098.26,INR,Cancelled,07-12-2023,14-12-2023
+ORD10079,user79@example.com,User 79,"[{'prod_id': 'A3GJOTZ9BBXMZO', 'qty': 2}, {'prod_id': 'A38VRTFAUSM3C', 'qty': 1}, {'prod_id': 'A360RBEHA3FEHM', 'qty': 1}]",85040.41,INR,Processing,09-07-2023,12-07-2023
+ORD10080,user80@example.com,User 80,"[{'prod_id': 'A1IAGFXK3ICQ72', 'qty': 2}, {'prod_id': 'A1SNKIB7UHTIIJ', 'qty': 2}, {'prod_id': 'A1WRMFSA09UFIP', 'qty': 1}]",124788.94,INR,Processing,12-07-2025,23-07-2025
+ORD10081,user81@example.com,User 81,"[{'prod_id': 'AHERJKZZCSSNR', 'qty': 1}, {'prod_id': 'A1HW1LFQS9TT9E', 'qty': 2}, {'prod_id': 'A1LU3D3Q78LLCU', 'qty': 2}, {'prod_id': 'A3QS0HCNNICI2E', 'qty': 2}]",138053.85,INR,Returned,16-09-2024,19-09-2024
+ORD10082,user82@example.com,User 82,"[{'prod_id': 'A208GJMPZU4YL8', 'qty': 1}]",77287.09,INR,Processing,10-04-2025,19-04-2025
+ORD10083,user83@example.com,User 83,"[{'prod_id': 'A3I07C5PD33KVE', 'qty': 1}, {'prod_id': 'A30LEPT5GW6IZT', 'qty': 1}, {'prod_id': 'A3N0UN9G49J9SH', 'qty': 2}]",71728.47,INR,Shipped,05-12-2024,16-12-2024
+ORD10084,user84@example.com,User 84,"[{'prod_id': 'A2EFQ5VH7L4SZI', 'qty': 1}, {'prod_id': 'A1I4V640HSOLK3', 'qty': 1}, {'prod_id': 'A15APWRK6P7LBV', 'qty': 1}]",114403.31,INR,Cancelled,19-01-2025,27-01-2025
+ORD10085,user85@example.com,User 85,"[{'prod_id': 'A1BG6UROSIKNXN', 'qty': 1}]",33283.6,INR,Cancelled,12-10-2024,17-10-2024
+ORD10086,user86@example.com,User 86,"[{'prod_id': 'A44RSW44O1R7R', 'qty': 1}]",69698.9,INR,Cancelled,09-06-2024,18-06-2024
+ORD10087,user87@example.com,User 87,"[{'prod_id': 'A1J28T6E1D4WPU', 'qty': 1}, {'prod_id': 'A1HW1LFQS9TT9E', 'qty': 1}]",99172.52,INR,Out for delivery,03-08-2024,12-08-2024
+ORD10088,user88@example.com,User 88,"[{'prod_id': 'AGOKDG42D8KUC', 'qty': 2}, {'prod_id': 'A3K1R6O2PZ6DMJ', 'qty': 2}, {'prod_id': 'A3IOWXCV4KFZ3Q', 'qty': 2}]",85354.02,INR,Delivered,01-05-2024,10-05-2024
+ORD10089,user89@example.com,User 89,"[{'prod_id': 'A35T5301S0B422', 'qty': 2}, {'prod_id': 'A3I07C5PD33KVE', 'qty': 2}, {'prod_id': 'AD9ULORXXMYHK', 'qty': 1}, {'prod_id': 'A16PT6EQJMN693', 'qty': 1}]",135457.29,INR,Returned,25-09-2024,06-10-2024
+ORD10090,user90@example.com,User 90,"[{'prod_id': 'AFD61WGEA2CZA', 'qty': 1}, {'prod_id': 'A2H89ZCT4ZX1ST', 'qty': 1}, {'prod_id': 'A3HB5JPATBSNZ7', 'qty': 1}]",139999.7,INR,Out for delivery,08-12-2024,12-12-2024
+ORD10091,user91@example.com,User 91,"[{'prod_id': 'A2TDM3T8OQK0LC', 'qty': 2}]",65556.74,INR,Out for delivery,02-08-2024,11-08-2024
+ORD10092,user92@example.com,User 92,"[{'prod_id': 'APMVYK5AMZ4PX', 'qty': 1}, {'prod_id': 'A36C2PFZ16SXGW', 'qty': 1}, {'prod_id': 'A32F9J0MMB21U8', 'qty': 1}]",138858.11,INR,Delivered,05-01-2023,10-01-2023
+ORD10093,user93@example.com,User 93,"[{'prod_id': 'A1N597994A4L66', 'qty': 2}, {'prod_id': 'A3FT3NRVQ52555', 'qty': 2}]",50067.26,INR,Cancelled,11-02-2024,23-02-2024
+ORD10094,user94@example.com,User 94,"[{'prod_id': 'A11ULUERI37RXQ', 'qty': 1}, {'prod_id': 'A1YWE81IRGJKWN', 'qty': 1}, {'prod_id': 'A396TV5IUD01LM', 'qty': 1}, {'prod_id': 'A1RP79F1SWDMZH', 'qty': 2}]",26544.62,INR,Shipped,23-01-2025,31-01-2025
+ORD10095,user95@example.com,User 95,"[{'prod_id': 'A27F0FNA6WTMGT', 'qty': 1}, {'prod_id': 'A3DLJ270MN1IDF', 'qty': 2}, {'prod_id': 'A1G74W3VJGHK92', 'qty': 2}]",143395.93,INR,Delivered,12-05-2025,15-05-2025
+ORD10096,user96@example.com,User 96,"[{'prod_id': 'A3SK2MLF5EY2X0', 'qty': 1}, {'prod_id': 'A2ZSJ33QWA8XM2', 'qty': 1}, {'prod_id': 'A3QGRG2ISKUYCG', 'qty': 1}, {'prod_id': 'A39EMLL82PJRE6', 'qty': 2}]",48990.13,INR,Returned,03-05-2023,10-05-2023
+ORD10097,user97@example.com,User 97,"[{'prod_id': 'AHR0K3XXSXUQY', 'qty': 2}]",116830.02,INR,Out for delivery,07-06-2025,18-06-2025
+ORD10098,user98@example.com,User 98,"[{'prod_id': 'A3DVLP6BRVN47S', 'qty': 1}, {'prod_id': 'A2RNXUUCSZQOKD', 'qty': 1}]",101730.83,INR,Cancelled,03-08-2025,15-08-2025
+ORD10099,user99@example.com,User 99,"[{'prod_id': 'A396TV5IUD01LM', 'qty': 2}, {'prod_id': 'A3GW5CKPDHE2JH', 'qty': 1}, {'prod_id': 'A23ADOZFIJNPFB', 'qty': 1}, {'prod_id': 'A3OFVL4H3B8F0L', 'qty': 1}]",55112.18,INR,Returned,05-11-2024,08-11-2024
+ORD10100,user100@example.com,User 100,"[{'prod_id': 'A2AJ0653QY6V72', 'qty': 2}, {'prod_id': 'AIWI6D1LUBV5B', 'qty': 2}, {'prod_id': 'A27F0FNA6WTMGT', 'qty': 1}]",89155.12,INR,Out for delivery,12-03-2023,23-03-2023
+ORD10101,user101@example.com,User 101,"[{'prod_id': 'A38SYBCXMXFCZS', 'qty': 2}, {'prod_id': 'A3QM8VC1B6OJ7T', 'qty': 2}]",14199.91,INR,Delivered,15-02-2024,24-02-2024
+ORD10102,user102@example.com,User 102,"[{'prod_id': 'A2HD03YRNPP9UN', 'qty': 2}, {'prod_id': 'A159LIUNX2QVOR', 'qty': 2}, {'prod_id': 'A8A1WPD6VSRQD', 'qty': 1}]",1529.19,INR,Out for delivery,28-02-2025,09-03-2025
+ORD10103,user103@example.com,User 103,"[{'prod_id': 'A314AM84MLRHAV', 'qty': 2}, {'prod_id': 'A8A1WPD6VSRQD', 'qty': 2}, {'prod_id': 'A9UAVDPLK0Y1E', 'qty': 2}, {'prod_id': 'A3N68VK0DG90PV', 'qty': 1}]",13422.53,INR,Processing,13-04-2024,25-04-2024
+ORD10104,user104@example.com,User 104,"[{'prod_id': 'A17HDURM0JUBSJ', 'qty': 2}, {'prod_id': 'A3KJ4RV3CFD61F', 'qty': 2}, {'prod_id': 'AMXZMXC6P9ZM4', 'qty': 2}]",25733.97,INR,Returned,20-04-2025,27-04-2025
+ORD10105,user105@example.com,User 105,"[{'prod_id': 'A23QGY67OB51D4', 'qty': 1}, {'prod_id': 'A15VU8OYD49T1N', 'qty': 1}, {'prod_id': 'A14YM892528UG', 'qty': 2}, {'prod_id': 'A1WRMFSA09UFIP', 'qty': 1}]",59997.39,INR,Shipped,02-12-2024,08-12-2024
+ORD10106,user106@example.com,User 106,"[{'prod_id': 'ATVPDKIKX0DER', 'qty': 2}, {'prod_id': 'A3V2BOI82YC1OS', 'qty': 2}, {'prod_id': 'A1EBMT5DFO2LTB', 'qty': 1}, {'prod_id': 'A2I9G61XDT1RQW', 'qty': 2}]",111677.08,INR,Delivered,01-03-2024,11-03-2024
+ORD10107,user107@example.com,User 107,"[{'prod_id': 'AB9NZ12R1LLKH', 'qty': 2}, {'prod_id': 'A3AZM2JWLVPIMB', 'qty': 1}, {'prod_id': 'A2NL9UUKFTRQH', 'qty': 2}, {'prod_id': 'A1TNZMWNOOECTO', 'qty': 2}]",112782.96,INR,Out for delivery,02-04-2023,14-04-2023
+ORD10108,user108@example.com,User 108,"[{'prod_id': 'A316G987QF1YAG', 'qty': 1}, {'prod_id': 'AIWI6D1LUBV5B', 'qty': 1}]",8281.81,INR,Shipped,25-01-2024,02-02-2024
+ORD10109,user109@example.com,User 109,"[{'prod_id': 'A3BBGTA2QOEYXC', 'qty': 1}, {'prod_id': 'A2H2GWZ2QEX5M0', 'qty': 2}, {'prod_id': 'A35MLEUWE75FA3', 'qty': 2}, {'prod_id': 'A3HBX09MZPNBF0', 'qty': 2}]",23133.39,INR,Delivered,21-03-2025,28-03-2025
+ORD10110,user110@example.com,User 110,"[{'prod_id': 'AEM3N5YOXGQBK', 'qty': 2}]",40299.78,INR,Shipped,22-09-2024,04-10-2024
+ORD10111,user111@example.com,User 111,"[{'prod_id': 'A37XTHX7ZK0A3P', 'qty': 1}, {'prod_id': 'A28UJHQNAD0UAY', 'qty': 1}, {'prod_id': 'A3BBGTA2QOEYXC', 'qty': 2}, {'prod_id': 'A1XCELGX1Z8BVE', 'qty': 2}]",81461.64,INR,Out for delivery,10-03-2023,16-03-2023
+ORD10112,user112@example.com,User 112,"[{'prod_id': 'A382C8HF2FG78A', 'qty': 1}]",130708.63,INR,Shipped,31-01-2024,04-02-2024
+ORD10113,user113@example.com,User 113,"[{'prod_id': 'A3QS0HCNNICI2E', 'qty': 2}]",45696.28,INR,Processing,15-11-2023,22-11-2023
+ORD10114,user114@example.com,User 114,"[{'prod_id': 'A99CRNA3RFW5V', 'qty': 1}, {'prod_id': 'A18VBPJYTAGNYD', 'qty': 2}, {'prod_id': 'A15A341J4Q8LM6', 'qty': 1}]",51045.37,INR,Processing,19-05-2024,30-05-2024
+ORD10115,user115@example.com,User 115,"[{'prod_id': 'AH1YFAUS3NHX2', 'qty': 1}]",109495.66,INR,Returned,30-04-2024,05-05-2024
+ORD10116,user116@example.com,User 116,"[{'prod_id': 'A36C2PFZ16SXGW', 'qty': 2}, {'prod_id': 'A2HD03YRNPP9UN', 'qty': 1}, {'prod_id': 'A25PLKFUK2GS0E', 'qty': 2}, {'prod_id': 'A314AM84MLRHAV', 'qty': 1}]",20619.31,INR,Out for delivery,28-05-2025,01-06-2025
+ORD10117,user117@example.com,User 117,"[{'prod_id': 'AATD5MTL5ZEAF', 'qty': 1}, {'prod_id': 'A3KD9AX6XDHDF', 'qty': 1}, {'prod_id': 'A2VZAYYN2XUXJT', 'qty': 2}]",13709.59,INR,Cancelled,13-04-2024,21-04-2024
+ORD10118,user118@example.com,User 118,"[{'prod_id': 'ANSGDQCC7KGLJ', 'qty': 1}, {'prod_id': 'A3MH3GS2MREDSC', 'qty': 2}, {'prod_id': 'A2KDBGPI4VU5M7', 'qty': 1}, {'prod_id': 'A9KOCB8FTE8R3', 'qty': 2}]",54381.78,INR,Delivered,06-02-2024,11-02-2024
+ORD10119,user119@example.com,User 119,"[{'prod_id': 'A105EAKJYOP8OP', 'qty': 2}, {'prod_id': 'A15XO3LDES90J8', 'qty': 2}, {'prod_id': 'A1DDJFCKQLS5EZ', 'qty': 1}]",58053.71,INR,Delivered,23-11-2024,27-11-2024
+ORD10120,user120@example.com,User 120,"[{'prod_id': 'A25DCVYS8S4ML8', 'qty': 2}, {'prod_id': 'A28E0G53P6VSHN', 'qty': 2}, {'prod_id': 'ALVTCB5W0Q3G2', 'qty': 2}]",13875.15,INR,Processing,04-04-2023,12-04-2023
+ORD10121,user121@example.com,User 121,"[{'prod_id': 'A11669YYE9MWDD', 'qty': 2}, {'prod_id': 'A3DQY03E03JMV9', 'qty': 1}]",29074.46,INR,Returned,04-04-2023,09-04-2023
+ORD10122,user122@example.com,User 122,"[{'prod_id': 'A1L987OQZSDIXN', 'qty': 1}]",36528.08,INR,Out for delivery,08-10-2023,20-10-2023
+ORD10123,user123@example.com,User 123,"[{'prod_id': 'AKYF1L213VBD1', 'qty': 2}, {'prod_id': 'A2BGAAOURAL9O6', 'qty': 1}, {'prod_id': 'A3SK2MLF5EY2X0', 'qty': 1}]",69484.05,INR,Shipped,25-03-2024,31-03-2024
+ORD10124,user124@example.com,User 124,"[{'prod_id': 'ASJRQV1KODYGF', 'qty': 1}, {'prod_id': 'A2MMDKFVXD4EYY', 'qty': 2}, {'prod_id': 'ALKKBKP6T3D45', 'qty': 2}, {'prod_id': 'AATD5MTL5ZEAF', 'qty': 1}]",50631.91,INR,Delivered,12-09-2024,23-09-2024
+ORD10125,user125@example.com,User 125,"[{'prod_id': 'A23S71QXDZCPQA', 'qty': 1}]",129214.9,INR,Delivered,14-10-2024,17-10-2024
+ORD10126,user126@example.com,User 126,"[{'prod_id': 'ACKP4U3OER6YM', 'qty': 1}, {'prod_id': 'A29K9T6L697O20', 'qty': 2}, {'prod_id': 'A18W64285II6PQ', 'qty': 2}, {'prod_id': 'A1EA4W4NX7SS7Y', 'qty': 2}]",116548.62,INR,Delivered,09-04-2023,13-04-2023
+ORD10127,user127@example.com,User 127,"[{'prod_id': 'A1SEEPS9IE4N2S', 'qty': 1}, {'prod_id': 'A1EBMT5DFO2LTB', 'qty': 1}, {'prod_id': 'A2JWZC447DF3BB', 'qty': 1}, {'prod_id': 'ASF0S1GFIHF5V', 'qty': 1}]",24395.43,INR,Returned,17-10-2024,27-10-2024
+ORD10128,user128@example.com,User 128,"[{'prod_id': 'A1COIXT69Y8KR', 'qty': 1}, {'prod_id': 'A5L00316BBQS1', 'qty': 2}, {'prod_id': 'A2KDBGPI4VU5M7', 'qty': 1}]",52000.21,INR,Shipped,11-07-2024,14-07-2024
+ORD10129,user129@example.com,User 129,"[{'prod_id': 'AX8GYIG6RXC4', 'qty': 1}, {'prod_id': 'A3MHJLSLQR2CVH', 'qty': 1}, {'prod_id': 'A3IL8DIPPETPI4', 'qty': 2}]",141749.77,INR,Processing,16-04-2024,21-04-2024
+ORD10130,user130@example.com,User 130,"[{'prod_id': 'A279LIVC2BRR8I', 'qty': 2}, {'prod_id': 'A2XRVNEV99Y8K8', 'qty': 1}, {'prod_id': 'A1FNXIVVNRHB2X', 'qty': 2}]",112393.41,INR,Delivered,03-02-2025,15-02-2025
+ORD10131,user131@example.com,User 131,"[{'prod_id': 'AE1A1GREFL29I', 'qty': 1}, {'prod_id': 'AE1A1GREFL29I', 'qty': 2}, {'prod_id': 'A3OBINRC6M8YIT', 'qty': 1}, {'prod_id': 'A3JYODG1N7JTWY', 'qty': 2}]",80263.38,INR,Out for delivery,16-05-2024,25-05-2024
+ORD10132,user132@example.com,User 132,"[{'prod_id': 'A2KDBGPI4VU5M7', 'qty': 2}, {'prod_id': 'ALKDRDFF3RU7R', 'qty': 1}, {'prod_id': 'A3NX7HVRPCDO7', 'qty': 2}, {'prod_id': 'A2QK881F10GXG1', 'qty': 2}]",138416.66,INR,Delivered,10-09-2023,19-09-2023
+ORD10133,user133@example.com,User 133,"[{'prod_id': 'A1YH3Z01S4QXUF', 'qty': 2}, {'prod_id': 'A23VBXMR4PFWK7', 'qty': 2}, {'prod_id': 'A3OUDPJCHZLQ3L', 'qty': 2}, {'prod_id': 'A3VNLHXSBWXZND', 'qty': 1}]",121121.45,INR,Returned,14-07-2025,24-07-2025
+ORD10134,user134@example.com,User 134,"[{'prod_id': 'A30O927YF02NOP', 'qty': 1}, {'prod_id': 'A2CFHVUH63IJ53', 'qty': 1}, {'prod_id': 'A173GE3WA26NL0', 'qty': 2}]",113984.69,INR,Shipped,03-11-2024,06-11-2024
+ORD10135,user135@example.com,User 135,"[{'prod_id': 'AR8XJJ19SNPNX', 'qty': 1}]",136051.65,INR,Processing,10-09-2024,16-09-2024
+ORD10136,user136@example.com,User 136,"[{'prod_id': 'AT5V7SIKNKIN9', 'qty': 2}, {'prod_id': 'A2OPUAQVSPCTA3', 'qty': 2}, {'prod_id': 'A2IGQMXF7X4KO2', 'qty': 1}]",71631.11,INR,Returned,30-06-2024,12-07-2024
+ORD10137,user137@example.com,User 137,"[{'prod_id': 'A3KJ4RV3CFD61F', 'qty': 1}, {'prod_id': 'A23QGY67OB51D4', 'qty': 2}]",142823.78,INR,Cancelled,22-09-2023,02-10-2023
+ORD10138,user138@example.com,User 138,"[{'prod_id': 'A2RNOIARUCRCKC', 'qty': 2}, {'prod_id': 'A2VVUDAAFOKHEP', 'qty': 2}, {'prod_id': 'AH1YFAUS3NHX2', 'qty': 1}]",125174.43,INR,Out for delivery,14-02-2023,24-02-2023
+ORD10139,user139@example.com,User 139,"[{'prod_id': 'A1UKF60A19RLMY', 'qty': 1}, {'prod_id': 'A2HSWZJNO2ABVT', 'qty': 1}]",3029.56,INR,Returned,05-08-2024,16-08-2024
+ORD10140,user140@example.com,User 140,"[{'prod_id': 'A3PHKV74SGJ688', 'qty': 2}, {'prod_id': 'AZLEWEBSPAY9I', 'qty': 1}, {'prod_id': 'A1TWYVWG4QDVKK', 'qty': 1}]",37063.89,INR,Out for delivery,21-04-2023,01-05-2023
+ORD10141,user141@example.com,User 141,"[{'prod_id': 'ACDPO259470CB', 'qty': 2}, {'prod_id': 'A1RCFO8HDTXYVX', 'qty': 2}, {'prod_id': 'A1W1R41WY42187', 'qty': 2}]",12683.37,INR,Returned,02-05-2025,08-05-2025
+ORD10142,user142@example.com,User 142,"[{'prod_id': 'A2I00EBEBYMKDS', 'qty': 2}]",85213.16,INR,Cancelled,08-12-2023,12-12-2023
+ORD10143,user143@example.com,User 143,"[{'prod_id': 'A12780V2RWO0DW', 'qty': 2}, {'prod_id': 'A1EA4W4NX7SS7Y', 'qty': 1}, {'prod_id': 'A11QOGNNSCNS05', 'qty': 1}]",107112.8,INR,Cancelled,04-10-2023,10-10-2023
+ORD10144,user144@example.com,User 144,"[{'prod_id': 'A3H5E05B62LL26', 'qty': 2}, {'prod_id': 'A1NUJIEXUACBIW', 'qty': 2}]",122502.05,INR,Returned,11-01-2025,19-01-2025
+ORD10145,user145@example.com,User 145,"[{'prod_id': 'A78V1SGGI9KYV', 'qty': 1}, {'prod_id': 'AX89HKJAJ3K22', 'qty': 2}, {'prod_id': 'A2IGQMXF7X4KO2', 'qty': 1}, {'prod_id': 'A1G74W3VJGHK92', 'qty': 1}]",20661.81,INR,Cancelled,16-09-2024,20-09-2024
+ORD10146,user146@example.com,User 146,"[{'prod_id': 'A3N68VK0DG90PV', 'qty': 2}, {'prod_id': 'ASF0S1GFIHF5V', 'qty': 2}, {'prod_id': 'AIWI6D1LUBV5B', 'qty': 2}, {'prod_id': 'A16WYQSINTI7UB', 'qty': 2}]",30812.04,INR,Returned,30-01-2024,04-02-2024
+ORD10147,user147@example.com,User 147,"[{'prod_id': 'A2H2AYTJFCST9E', 'qty': 2}, {'prod_id': 'A3QD570NOB2MYF', 'qty': 1}]",43356.83,INR,Delivered,09-06-2025,16-06-2025
+ORD10148,user148@example.com,User 148,"[{'prod_id': 'A13KU9WJWV4RMN', 'qty': 1}, {'prod_id': 'A15A341J4Q8LM6', 'qty': 2}, {'prod_id': 'A31N74NH7BCCQX', 'qty': 2}]",582.28,INR,Returned,05-07-2025,13-07-2025
+ORD10149,user149@example.com,User 149,"[{'prod_id': 'A2IGQMXF7X4KO2', 'qty': 2}, {'prod_id': 'A1SEEPS9IE4N2S', 'qty': 1}]",79026.8,INR,Delivered,25-09-2024,02-10-2024
+ORD10150,user150@example.com,User 150,"[{'prod_id': 'A3TDP27KEZMDYW', 'qty': 1}]",102640.71,INR,Out for delivery,03-01-2024,06-01-2024
+ORD10151,user151@example.com,User 151,"[{'prod_id': 'AA18VJYV87WBM', 'qty': 2}, {'prod_id': 'A7ULJO7NAWM0L', 'qty': 1}, {'prod_id': 'A2TDM3T8OQK0LC', 'qty': 2}, {'prod_id': 'A5L00316BBQS1', 'qty': 2}]",100941.86,INR,Out for delivery,23-08-2023,28-08-2023
+ORD10152,user152@example.com,User 152,"[{'prod_id': 'AE1A1GREFL29I', 'qty': 2}]",111613.3,INR,Cancelled,26-09-2023,06-10-2023
+ORD10153,user153@example.com,User 153,"[{'prod_id': 'A3H5E05B62LL26', 'qty': 2}]",38066.22,INR,Cancelled,30-08-2024,07-09-2024
+ORD10154,user154@example.com,User 154,"[{'prod_id': 'A5L00316BBQS1', 'qty': 1}, {'prod_id': 'A2AEASGI6D7OME', 'qty': 2}, {'prod_id': 'A3DFAS4Y8FI1D0', 'qty': 2}]",148882.79,INR,Out for delivery,13-04-2025,17-04-2025
+ORD10155,user155@example.com,User 155,"[{'prod_id': 'A3P1JI9UX2MKYC', 'qty': 1}, {'prod_id': 'A1G74W3VJGHK92', 'qty': 2}, {'prod_id': 'A32HTM65Y90HY4', 'qty': 1}]",124614.44,INR,Out for delivery,29-12-2023,06-01-2024
+ORD10156,user156@example.com,User 156,"[{'prod_id': 'A32T2M1BDX55RN', 'qty': 2}, {'prod_id': 'A5S85ITUTBVC4', 'qty': 1}, {'prod_id': 'A1INVTZ6QC3RJ7', 'qty': 1}]",72769.55,INR,Cancelled,05-02-2024,17-02-2024
+ORD10157,user157@example.com,User 157,"[{'prod_id': 'A1D23EF28YI2M8', 'qty': 1}, {'prod_id': 'A2TMY1V1D4JYJ4', 'qty': 1}, {'prod_id': 'A3JW1T91Q3KTWX', 'qty': 1}]",65652.98,INR,Delivered,27-06-2025,05-07-2025
+ORD10158,user158@example.com,User 158,"[{'prod_id': 'A2XFKRPLLE4D0G', 'qty': 2}]",54226.71,INR,Returned,05-12-2023,10-12-2023
+ORD10159,user159@example.com,User 159,"[{'prod_id': 'A1GL48MCCW80M9', 'qty': 2}]",20432.35,INR,Cancelled,23-03-2025,02-04-2025
+ORD10160,user160@example.com,User 160,"[{'prod_id': 'ATC7BN7K132K1', 'qty': 1}, {'prod_id': 'A1QGUM6613TYVT', 'qty': 2}, {'prod_id': 'A3EGP08XFW0RSH', 'qty': 2}, {'prod_id': 'A1SNKIB7UHTIIJ', 'qty': 1}]",30793.99,INR,Out for delivery,19-03-2025,29-03-2025
+ORD10161,user161@example.com,User 161,"[{'prod_id': 'A1SEEPS9IE4N2S', 'qty': 2}, {'prod_id': 'A1N597994A4L66', 'qty': 1}]",44250.31,INR,Out for delivery,21-07-2024,25-07-2024
+ORD10162,user162@example.com,User 162,"[{'prod_id': 'A1N40FYD0F8KFK', 'qty': 2}, {'prod_id': 'A2HAYHLPF6CED5', 'qty': 2}, {'prod_id': 'A2N5I30GK5BT1C', 'qty': 1}, {'prod_id': 'A2MPQIZC358GVX', 'qty': 1}]",91299.39,INR,Delivered,30-05-2024,11-06-2024
+ORD10163,user163@example.com,User 163,"[{'prod_id': 'A32UWZKRCJN6FD', 'qty': 1}, {'prod_id': 'A38PQKE9DVJ09S', 'qty': 2}]",49120.53,INR,Delivered,06-07-2024,16-07-2024
+ORD10164,user164@example.com,User 164,"[{'prod_id': 'A2XFKRPLLE4D0G', 'qty': 2}, {'prod_id': 'A1FPV0GTGY23EF', 'qty': 2}]",30933.97,INR,Shipped,11-06-2023,14-06-2023
+ORD10165,user165@example.com,User 165,"[{'prod_id': 'A30DCH6PPMVYFV', 'qty': 1}, {'prod_id': 'A360RBEHA3FEHM', 'qty': 2}, {'prod_id': 'AMXK73KH2ZKK8', 'qty': 2}]",51673.51,INR,Out for delivery,15-07-2023,23-07-2023
+ORD10166,user166@example.com,User 166,"[{'prod_id': 'A1NYNV41ZUZ3UN', 'qty': 1}]",48971.71,INR,Returned,31-08-2023,04-09-2023
+ORD10167,user167@example.com,User 167,"[{'prod_id': 'A1RP79F1SWDMZH', 'qty': 1}]",54025.01,INR,Processing,23-06-2024,02-07-2024
+ORD10168,user168@example.com,User 168,"[{'prod_id': 'A3PRCTS1EYPJ0Q', 'qty': 2}, {'prod_id': 'A216JI1GI45BCF', 'qty': 2}, {'prod_id': 'ACP0SQH19RH10', 'qty': 2}, {'prod_id': 'A2ZMJXQW622XKA', 'qty': 1}]",50768.9,INR,Cancelled,08-04-2024,19-04-2024
+ORD10169,user169@example.com,User 169,"[{'prod_id': 'A1S17VAHVOMNYR', 'qty': 2}, {'prod_id': 'A126824KIOA8L8', 'qty': 1}, {'prod_id': 'A1LJO3FZJ9NMOU', 'qty': 2}]",147852.95,INR,Out for delivery,31-03-2023,09-04-2023
+ORD10170,user170@example.com,User 170,"[{'prod_id': 'A2L8UR4926PJ36', 'qty': 1}, {'prod_id': 'A3LOYY7VHAF9EG', 'qty': 2}]",10997.05,INR,Cancelled,19-07-2023,31-07-2023
+ORD10171,user171@example.com,User 171,"[{'prod_id': 'A1NJ0WD84T9G5T', 'qty': 2}]",43034.99,INR,Returned,25-06-2024,28-06-2024
+ORD10172,user172@example.com,User 172,"[{'prod_id': 'A2JWZC447DF3BB', 'qty': 1}, {'prod_id': 'A3KJ4RV3CFD61F', 'qty': 2}]",70220.1,INR,Cancelled,12-10-2023,22-10-2023
+ORD10173,user173@example.com,User 173,"[{'prod_id': 'ALKDRDFF3RU7R', 'qty': 1}, {'prod_id': 'A2L8UR4926PJ36', 'qty': 2}]",76510.65,INR,Delivered,10-03-2023,13-03-2023
+ORD10174,user174@example.com,User 174,"[{'prod_id': 'ARXKDM7ND9Z2C', 'qty': 1}, {'prod_id': 'A38K1C1DGKTVT0', 'qty': 1}, {'prod_id': 'A2JTFL4V8HYESG', 'qty': 1}, {'prod_id': 'AIWN3RU5X7R2U', 'qty': 1}]",90706.77,INR,Delivered,27-06-2025,01-07-2025
+ORD10175,user175@example.com,User 175,"[{'prod_id': 'A2W48U3XUS6VVO', 'qty': 2}, {'prod_id': 'A16WYQSINTI7UB', 'qty': 2}]",62742.33,INR,Delivered,06-03-2025,10-03-2025
+ORD10176,user176@example.com,User 176,"[{'prod_id': 'A99CRNA3RFW5V', 'qty': 1}, {'prod_id': 'A37T6TXNSX3Q4J', 'qty': 1}, {'prod_id': 'A2VLBXA9GN9C90', 'qty': 2}, {'prod_id': 'A2RXY7MNWAZYFR', 'qty': 1}]",37142.92,INR,Out for delivery,07-09-2024,13-09-2024
+ORD10177,user177@example.com,User 177,"[{'prod_id': 'A1JEZ1O7F81YDT', 'qty': 2}, {'prod_id': 'ACP0SQH19RH10', 'qty': 2}]",7371.88,INR,Delivered,22-01-2023,30-01-2023
+ORD10178,user178@example.com,User 178,"[{'prod_id': 'A3UBXJ2R9SZ9Z4', 'qty': 2}]",67808.26,INR,Processing,03-09-2024,11-09-2024
+ORD10179,user179@example.com,User 179,"[{'prod_id': 'A1EBUHNEGIBCKM', 'qty': 2}]",1212.34,INR,Cancelled,21-03-2023,25-03-2023
+ORD10180,user180@example.com,User 180,"[{'prod_id': 'A1Y8O3H17CH952', 'qty': 2}, {'prod_id': 'AX2RYB2N0YL63', 'qty': 2}, {'prod_id': 'A3OQFKFXQW7IBQ', 'qty': 1}]",67281.32,INR,Delivered,03-11-2023,10-11-2023
+ORD10181,user181@example.com,User 181,"[{'prod_id': 'A32F9J0MMB21U8', 'qty': 2}, {'prod_id': 'A2WZQ6HPXWOBQO', 'qty': 2}, {'prod_id': 'A1XY3OYY7BJ0M4', 'qty': 1}, {'prod_id': 'A2ZA2SMHG5DDNQ', 'qty': 1}]",133057.22,INR,Returned,26-05-2024,06-06-2024
+ORD10182,user182@example.com,User 182,"[{'prod_id': 'A1SB5FRTIFMLKE', 'qty': 2}, {'prod_id': 'AA6MR5993HU8E', 'qty': 1}, {'prod_id': 'A2GUMCXR7HBXM2', 'qty': 1}]",6064.53,INR,Processing,01-11-2023,10-11-2023
+ORD10183,user183@example.com,User 183,"[{'prod_id': 'ALSPGD5KDMVR1', 'qty': 1}, {'prod_id': 'A2TYBYBQQJ0B8N', 'qty': 2}, {'prod_id': 'A1Y4RBJHD0SC34', 'qty': 1}]",11555.88,INR,Shipped,14-04-2025,18-04-2025
+ORD10184,user184@example.com,User 184,"[{'prod_id': 'A3V2BOI82YC1OS', 'qty': 1}, {'prod_id': 'A2I00EBEBYMKDS', 'qty': 2}, {'prod_id': 'A3PQ9R1ZBRYO7Q', 'qty': 2}]",23705.26,INR,Processing,17-11-2024,29-11-2024
+ORD10185,user185@example.com,User 185,"[{'prod_id': 'A8M8D6ATEJL3Y', 'qty': 2}]",114324.25,INR,Shipped,18-09-2023,29-09-2023
+ORD10186,user186@example.com,User 186,"[{'prod_id': 'A1COOS9SVX27NM', 'qty': 2}, {'prod_id': 'A5L00316BBQS1', 'qty': 2}, {'prod_id': 'A37T6TXNSX3Q4J', 'qty': 2}]",84791.38,INR,Shipped,25-05-2024,29-05-2024
+ORD10187,user187@example.com,User 187,"[{'prod_id': 'A1HKIELT4BHXAW', 'qty': 2}]",10776.51,INR,Cancelled,22-01-2025,29-01-2025
+ORD10188,user188@example.com,User 188,"[{'prod_id': 'A1HTBWL1H15R7Q', 'qty': 2}, {'prod_id': 'A38V91JH5G8OV2', 'qty': 2}]",106552.36,INR,Processing,14-01-2025,20-01-2025
+ORD10189,user189@example.com,User 189,"[{'prod_id': 'A2ZA2SMHG5DDNQ', 'qty': 1}, {'prod_id': 'A3V2BOI82YC1OS', 'qty': 2}]",96870.54,INR,Delivered,24-12-2024,02-01-2025
+ORD10190,user190@example.com,User 190,"[{'prod_id': 'A3UOJSBX6B13WX', 'qty': 1}, {'prod_id': 'A257RQ85BTUV7H', 'qty': 2}, {'prod_id': 'A7REC5ARSB6L4', 'qty': 2}, {'prod_id': 'A2KOTYHU6JDT4X', 'qty': 2}]",83013.43,INR,Processing,11-10-2024,19-10-2024
+ORD10191,user191@example.com,User 191,"[{'prod_id': 'A1LEM297LNF1FK', 'qty': 1}, {'prod_id': 'A2RFUEQA0W0DW6', 'qty': 2}]",135075.11,INR,Shipped,15-04-2023,18-04-2023
+ORD10192,user192@example.com,User 192,"[{'prod_id': 'A1LX0GLVLTAWY', 'qty': 1}, {'prod_id': 'A1J28T6E1D4WPU', 'qty': 2}, {'prod_id': 'A23QGY67OB51D4', 'qty': 1}, {'prod_id': 'A3K9ARYWGB1679', 'qty': 1}]",24421.41,INR,Shipped,11-05-2023,19-05-2023
+ORD10193,user193@example.com,User 193,"[{'prod_id': 'A34V3O18ZYGJY', 'qty': 2}, {'prod_id': 'A1KLTFWR9E1TCO', 'qty': 2}, {'prod_id': 'A3I07C5PD33KVE', 'qty': 2}]",134949.03,INR,Processing,14-11-2024,25-11-2024
+ORD10194,user194@example.com,User 194,"[{'prod_id': 'A3EMQME1395PXS', 'qty': 1}, {'prod_id': 'ACWEESXPOUU44', 'qty': 2}]",92371.49,INR,Returned,01-03-2025,09-03-2025
+ORD10195,user195@example.com,User 195,"[{'prod_id': 'A2APTY87CKROPV', 'qty': 2}, {'prod_id': 'A305Z7A2940G8C', 'qty': 2}, {'prod_id': 'A36TQBDPL3EVC0', 'qty': 2}, {'prod_id': 'A9P7WY02EYSEE', 'qty': 1}]",18627.43,INR,Returned,16-02-2025,23-02-2025
+ORD10196,user196@example.com,User 196,"[{'prod_id': 'A1OAE621SUHTP8', 'qty': 2}]",58250.57,INR,Cancelled,07-10-2024,10-10-2024
+ORD10197,user197@example.com,User 197,"[{'prod_id': 'A21GN93WT7I20T', 'qty': 1}, {'prod_id': 'A3351LRKCGV34N', 'qty': 1}, {'prod_id': 'A2DVT4KZAUD5GA', 'qty': 2}, {'prod_id': 'A1BZ5F9KZAF90M', 'qty': 1}]",92393.95,INR,Returned,02-09-2023,09-09-2023
+ORD10198,user198@example.com,User 198,"[{'prod_id': 'A1R2LN4EZ9SAP8', 'qty': 2}]",1158.75,INR,Processing,01-02-2023,06-02-2023
+ORD10199,user199@example.com,User 199,"[{'prod_id': 'ACKP4U3OER6YM', 'qty': 2}, {'prod_id': 'AC6BEVHQNJ0BN', 'qty': 2}, {'prod_id': 'A1GG5MGASPGTVZ', 'qty': 1}]",114383.34,INR,Shipped,15-02-2023,26-02-2023
+ORD10200,user200@example.com,User 200,"[{'prod_id': 'APM7VB5RAV88H', 'qty': 1}, {'prod_id': 'A1N57MHA38OKJS', 'qty': 2}, {'prod_id': 'ACDPO259470CB', 'qty': 1}, {'prod_id': 'AZB7T09DCHG13', 'qty': 2}]",134129.93,INR,Delivered,11-04-2024,16-04-2024

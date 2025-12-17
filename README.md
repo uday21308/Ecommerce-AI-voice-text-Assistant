@@ -1,0 +1,179 @@
+🛒 Ecommerce AI Voice Assistant
+
+A real-time AI-powered ecommerce voice assistant that allows users to interact through text and voice, ask about products, check return policies, and track orders.
+The system combines LLMs, Retrieval-Augmented Generation (RAG), browser-based speech interfaces, and backend decision logic to deliver a complete conversational commerce experience.
+
+
+📌 Project Overview
+
+Voice-based interfaces are becoming a critical interaction channel in digital commerce.
+This project demonstrates an end-to-end AI voicebot capable of:
+
+-Understanding spoken or typed customer queries
+-Answering ecommerce-related questions
+-Recommending products
+-Tracking orders using mock backend data
+-Responding with synthesized speech
+-Showing transparency via tool usage and retrieved context
+
+This implementation focuses on clarity, modular design, and real-world ecommerce use cases.
+
+🎯 Key Features
+
+🎤 Voice Interaction (Browser STT + TTS)
+💬 Text Chat Interface
+🧠 LLM-driven Conversational Intelligence
+📚 Retrieval-Augmented Generation (RAG)
+🛍️ Product Search & Recommendation
+📦 Order Tracking via Backend Logic
+🔍 Tool & Context Transparency Panel
+🧑‍💻 Modern UI (React + Tailwind CSS)
+🧩 Modular Backend Architecture
+📊 Observability-ready (LangSmith compatible)
+
+🏗️ System Architecture
+
+Voice / Text Flow:
+
+User (Voice / Text)
+      ↓
+Browser Speech-to-Text (Web Speech API)
+      ↓
+FastAPI Backend
+      ↓
+Intent Router
+   ├─ Small Talk → LLM
+   ├─ Product Search → Tool + RAG
+   ├─ Order Tracking → Mock Orders DB
+      ↓
+LLM Response (Groq)
+      ↓
+Text-to-Speech (Browser TTS)
+      ↓
+User hears response
+
+RAG Flow:
+User Query → Embed → Vector DB (Chroma)
+           → Retrieve relevant products / FAQs
+           → Inject into LLM prompt
+
+🧩 Features Implemented
+
+✅ Voice Interaction
+-Browser-based Speech-to-Text
+-Browser-based Text-to-Speech
+-One-click mic interaction
+-Automatic stop-speaking before listening
+
+✅ Conversational Intelligence
+-LLM-powered reasoning (Groq – LLaMA 3.1)
+-System prompt to enforce ecommerce role
+-Small-talk handling
+-Graceful fallback for unsupported queries
+
+✅ Retrieval-Augmented Generation (RAG)
+-Product catalog embeddings
+-FAQ & policy embeddings
+-Chroma vector database
+-Context grounding (no hallucinations)
+
+✅ Backend Actions (Tools)
+-Order tracking using mock orders.csv
+-Product search using structured data
+-Tool routing logic based on intent
+
+✅ Observability
+-LangSmith tracing enabled
+-Tracks:
+-LLM calls
+-Retrieval steps
+-Tool invocations
+
+✅ UI / UX
+-Chat + voice in a single interface
+-Card-based professional UI (React + Tailwind)
+-Speaking avatar with waveform animation
+-Tool transparency panel
+
+🗂️ Project Structure
+Demo_Voicebot/
+│
+├── app/
+│   ├── main.py              # FastAPI app entry
+│   ├── api.py               # API routes
+│   ├── models.py            # Request/response models
+│
+├── ecommerce_llm.py         # Core LLM logic + intent routing
+├── ragstore1.py             # RAG pipeline (Chroma + embeddings)
+├── tools.py                 # Product search logic
+├── orders.py                # Order lookup logic
+├── products.csv             # Product catalog
+├── orders.csv               # Mock order data
+├── faqs.json                # FAQ / policy data
+├── requirements.txt         # Backend dependencies
+├── .env                     # Environment variables (not committed)
+│
+├── ecommerce-voice-ui/
+│   ├── src/
+│   │   ├── App.jsx
+│   │   ├── components/
+│   │   │   ├── ChatWindow.jsx
+│   │   │   ├── ToolPanel.jsx
+│   │   │   ├── SpeakingWaveform.jsx
+│   │   ├── utils/
+│   │   │   ├── tts.js
+│   │   ├── assets/
+│   │   │   ├── bot_avatar.png
+│   ├── index.html
+│
+└── README.md
+
+
+🔊 Supported User Scenarios
+
+✅ Informational Queries
+“What is your return policy?”
+
+✅ Product Queries
+“Suggest watches under 5000”
+
+✅ Order Tracking
+“Track order ORD10008”
+
+✅ Small Talk / Assistance
+“Hi, can you help me?”
+
+⚙️ Setup Instructions
+
+1️⃣ Backend Setup
+
+cd Demo_Voicebot
+python -m venv myenv
+myenv\Scripts\activate   # Windows
+pip install -r requirements.txt
+
+Create .env file:
+GROQ_API_KEY=your_groq_key
+LANGCHAIN_TRACING_V2=true
+LANGCHAIN_API_KEY=your_langsmith_key
+LANGCHAIN_PROJECT=ecommerce-voicebot
+
+Run backend:
+uvicorn app.main:app --reload
+
+Backend runs at:
+http://127.0.0.1:8000
+
+2️⃣ Frontend Setup
+
+cd ecommerce-voice-ui
+npm install
+npm run dev
+
+Frontend runs at:
+http://localhost:5173
+
+
+🙌 Conclusion
+
+This project demonstrates a practical, modular, and extensible ecommerce voice assistant, showcasing real-world Generative AI concepts including LLMs, RAG, voice interaction, and observability — suitable for academic evaluation and further enhancement.
