@@ -169,7 +169,13 @@ Demo_Voicebot/
 “Place an order for HANPOSH Men Watches”
 
 
-
+## Demo and Test Cases
+![WhatsApp Image 2025-12-18 at 11 59 06 AM](https://github.com/user-attachments/assets/baee200e-2d45-425e-8402-739c12b1367e)
+![WhatsApp Image 2025-12-18 at 12 00 11 PM](https://github.com/user-attachments/assets/f8278020-6d21-4206-9581-a345d3d02d32)
+![WhatsApp Image 2025-12-18 at 12 02 42 PM](https://github.com/user-attachments/assets/d4e47bd7-2a79-459e-8ba7-bc19b06afc15)
+![WhatsApp Image 2025-12-18 at 12 04 20 PM](https://github.com/user-attachments/assets/e3c0553a-bab1-4717-8bb3-c31219a5c2f7)
+![WhatsApp Image 2025-12-18 at 12 06 49 PM](https://github.com/user-attachments/assets/f453adf7-b5a5-47ac-975a-ebd784fc37b8)
+![WhatsApp Image 2025-12-18 at 12 09 39 PM](https://github.com/user-attachments/assets/d2886ddc-1f66-4eab-b287-05e934a8d3e4)
 
 
 ---
