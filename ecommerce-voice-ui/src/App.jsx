@@ -20,8 +20,8 @@ export default function App() {
   }, [])
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-6
-  bg-gradient-to-br from-indigo-50 via-blue-50 to-purple-50">
+    <div className="relative min-h-screen flex items-center justify-center p-6
+  bg-gradient-to-br from-rose-100 via-red-100 to-orange-100 overflow-hidden">
     <div className="absolute inset-0 overflow-hidden -z-10">
         <div className="absolute top-20 left-10 w-72 h-72 bg-purple-300 rounded-full blur-3xl opacity-30"></div>
         <div className="absolute bottom-20 right-10 w-72 h-72 bg-blue-300 rounded-full blur-3xl opacity-30"></div>
@@ -33,17 +33,20 @@ export default function App() {
         {/* Chat */}
         <div className="md:col-span-2 rounded-2xl shadow-[0_20px_50px_rgba(8,_112,_184,_0.15)] flex flex-col h-[80vh]
                         bg-white/70 backdrop-blur-lg border border-white/40">
-          <div className="relative px-6 py-5 text-center rounded-t-2xl
-                          bg-gradient-to-r from-indigo-600 via-blue-600 to-purple-600">
-  
-              <h1 className="text-xl md:text-2xl font-bold tracking-tight text-white">
-                 Ecommerce AI Assistant
-              </h1>
 
-               <p className="text-sm text-blue-100 mt-1 font-medium">
-                Voice & Text Customer Support
-              </p>
-           </div>
+          <div className="relative px-6 py-5 text-center rounded-t-2xl
+               bg-gradient-to-r from-red-600 via-rose-600 to-orange-500">
+
+                <h1 className="text-2xl md:text-2xl font-extrabold tracking-tight text-white">
+                  Ecommerce AI Assistant
+                </h1>
+
+                <p className="text-sm text-red-100 mt-1 font-medium">
+                  Voice & Text Customer Support
+                </p>
+
+               <div className="mt-3 h-[1px] w-full bg-gradient-to-r from-transparent via-white/40 to-transparent" />
+            </div>
 
           <ChatWindow
             messages={messages}

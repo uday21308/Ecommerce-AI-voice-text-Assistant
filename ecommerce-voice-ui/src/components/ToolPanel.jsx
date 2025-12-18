@@ -8,7 +8,7 @@ export default function ToolPanel({ toolInfo, retrievedDocs }) {
         <h3 className="text-sm font-medium mb-1">Last Tool Used</h3>
         {toolInfo ? (
           <pre className="rounded-2xl shadow-lg p-2 text-xs overflow-auto h-[80vh]
-  bg-gradient-to-br from-white via-gray-50 to-blue-50 border border-gray-200">
+  bg-gradient-to-br from-white via-gray-50 to-red-50 border border-gray-200">
   
             {JSON.stringify(toolInfo, null, 2)}
           </pre>
@@ -23,7 +23,7 @@ export default function ToolPanel({ toolInfo, retrievedDocs }) {
         {retrievedDocs && retrievedDocs.length > 0 ? (
           <ul className="space-y-2">
             {retrievedDocs.map((doc, idx) => (
-              <li key={idx} className="bg-gray-100 p-2 rounded text-xs">
+              <li key={idx} className="bg-red-100 p-2 rounded text-xs">
                 <p className="font-semibold">{doc.title || doc.source}</p>
                 {doc.final_price && (
                   <p>Price: {doc.final_price}</p>

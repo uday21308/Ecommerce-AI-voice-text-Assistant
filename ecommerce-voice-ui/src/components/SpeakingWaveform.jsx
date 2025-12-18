@@ -4,7 +4,7 @@ export default function SpeakingWaveform() {
       {[...Array(5)].map((_, i) => (
         <span
           key={i}
-          className="w-1 rounded bg-blue-500 animate-wave"
+          className="w-1 rounded bg-gradient-to-t from-red-500 to-orange-400 animate-wave"
           style={{ animationDelay: `${i * 0.15}s` }}
         />
       ))}

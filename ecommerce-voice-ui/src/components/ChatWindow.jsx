@@ -121,7 +121,7 @@ export default function ChatWindow({
                   src={botAvatar}
                   alt="bot"
                   className={`w-8 h-8 rounded-full ${
-                    speaking ? "ring-2 ring-blue-400 animate-pulse" : ""
+                    speaking ? "ring-2 ring-red-400 animate-pulse" : ""
                   }`}
                 />
                 {speaking && <SpeakingWaveform />}
@@ -131,8 +131,8 @@ export default function ChatWindow({
             <div
               className={`max-w-[75%] px-4 py-2 rounded-2xl text-[14px] leading-relaxed font-medium ${
                 m.role === "user"
-                  ? "bg-gradient-to-r from-blue-500 to-indigo-500 text-white"
-                  : "bg-white/80 text-gray-800 backdrop-blur border border-gray-200"
+                  ? "bg-gradient-to-r from-red-500 to-rose-500 text-white shadow-md"
+                  : "bg-white/90 text-gray-800 shadow backdrop-blur border border-red-100"
               }`}
             >
               {m.text}
@@ -171,13 +171,13 @@ export default function ChatWindow({
           type="text"
           placeholder="Type a message…"
           className="flex-1 border rounded-xl px-4 py-2.5 text-sm font-medium
-placeholder:text-gray-400 focus:ring-2 focus:ring-blue-400 outline-none"
+placeholder:text-gray-400 focus:ring-2 focus:ring-red-400 outline-none"
           onKeyDown={(e) => e.key === "Enter" && sendMessage()}
         />
 
         <button
           onClick={() => sendMessage()}
-          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg"
+          className="bg-red-600 hover:bg-rose-700 text-white px-4 py-2 rounded-lg"
         >
           Send
         </button>
